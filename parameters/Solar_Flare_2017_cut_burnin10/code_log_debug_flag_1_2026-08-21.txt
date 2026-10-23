@@ -1,0 +1,33 @@
+[[1]]
+[1] "Start of the max computation: 2026-08-21 19:09:03.212314"
+
+[[2]]
+[1] "Start of the first optimization : 2026-08-21 19:09:03.34987"
+
+[[3]]
+[1] "Column 1 in the first optimization routine started running at 2026-08-21 19:09:03.382859"
+
+[[4]]
+[1] "Column 1 got past the first result in the first optimization routine at 2026-08-21 19:09:34.294741"
+
+[[5]]
+[1] "Column 1 got past the second result in the first optimization routine at 2026-08-21 19:09:34.296027"
+
+[[6]]
+[1] "Column 1 got past the third result in the first optimization routine at 2026-08-21 19:09:44.63933"
+
+[[7]]
+[1] "Start of the second optimization : 2026-08-21 19:09:44.640266"
+
+[[8]]
+[1] "Column 1 in the second optimization routine started running at 2026-08-21 19:09:44.666402"
+
+[[9]]
+[1] "Start of the export: 2026-08-21 19:09:51.671399"
+
+[[10]]
+[1] "This code started running at: 2026-08-21 19:08:59.834445"
+
+[[11]]
+[1] "This code finished running at: 2026-08-21 19:09:51.701223"
+

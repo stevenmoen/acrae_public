@@ -1,19 +1,14 @@
+# It is recommended to clear your environment before running this code. Uncomment and run the line below.
+# rm(list = ls())
+
+# Update the following path
+your_path_to_data = "~/Documents/GitHub/acrae_public/data/"
+
 # Load in libraries
-
-# library(tidyverse)
-# # library(ungeviz)
-# library(ggh4x)
-# library(latex2exp)
-# library(ggtext)
-# library(readxl)
-# library(VGAM)
-# library(dplyr)
-# library(scales)
-# library(ggpattern)
-
+library(tidyverse)
 
 # Read in 2011 original data
-data_2011_old = read.table("data.txt",header = F)
+data_2011_old = read.table(paste0(your_path_to_data, "data.txt"),header = F)
 
 # The six subareas are: NSF.r1c1, NSF.r2c2, SF1.r4c3, SF2.r5c4, SF1.r4c4, SF2.r5c5
 # These correspond to: V1, V12, V33, V44, V34, V45
@@ -46,5 +41,5 @@ figure_3_revised <- data_2011_old %>%
   scale_linetype_manual(values = rep(c(1,2),3)) + # This works fine in greyscale 02.23.2026
   scale_y_continuous(labels = scales::comma)
 
-# Export the plot
+# Export the plot (revise as needed)
 # ggsave(filename="fig3_revised.jpg", plot=figure_3_revised, path = "~/Documents/GitHub/solar_flare_project/Edited_Figures", dpi = 600, height = 4, width = 8)
