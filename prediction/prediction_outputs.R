@@ -25,6 +25,9 @@ library(latex2exp)
 # folder_file_2011_old_parameter = "Run\ from\ 7.28.2022/parameter3_clean_debug_flag_0_2024-02-19.csv"
 # folder_file_2011_old_parameter_r2 = "Solar_Flare_2011_new_data/parameter3_clean_debug_flag_0_2024-06-10.csv"
 folder_file_2011_new_parameter = "Solar_Flare_2011_new_data/parameter3_clean_debug_flag_0_2024-08-30.csv"
+folder_file_2017_parameter_pp = "Solar_Flare_2017_cut_burnin10/parameter3_clean_debug_flag_0_2026-08-22.csv" # Old, long-burn in
+folder_file_2022_parameter_pp = "Solar_Flare_2022_cut/parameter3_clean_debug_flag_0_2026-08-21.csv"
+folder_file_2023_parameter_pp = "Solar_Flare_2023_cut/parameter3_clean_debug_flag_0_2026-08-21.csv"
 # folder_file_2022_parameter = "Solar_Flare_2022_new_data/parameter3_clean_debug_flag_0_2024-08-30.csv"
 # # pf = pre-flare
 # folder_file_2022_parameter_pf = "Solar_Flare_2022_pre_flare/parameter3_clean_debug_flag_0_2025-04-29.csv"
