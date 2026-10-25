@@ -60,9 +60,9 @@ folder_file_2011_new_data = "Processed_Data/2011_Data_Para_Input_Files_New/max_d
 folder_file_2017_data = "Processed_Data/2017_Data_Para_Input_Files_New/max_df_2017_new_2026-02-16.rds"
 folder_file_2022_data = "Processed_Data/2022_Data_Para_Input_Files_New/max_df_2022_new_2024-08-29.rds"
 folder_file_2023_data = "Processed_Data/2023_Data_Para_Input_Files_New/max_df_2023_new_2024-08-30.rds"
-folder_file_2017_data_test = "Processed_Data/max_df_2017_cut.rds"
-folder_file_2022_data_test = "Processed_Data/max_df_2022_cut.rds"
-folder_file_2023_data_test = "Processed_Data/max_df_2023_cut.rds"
+folder_file_2017_data_test = "Processed_Data/post_peak_testing_data/max_df_2017_testing.rds"
+folder_file_2022_data_test = "Processed_Data/post_peak_testing_data/max_df_2022_testing.rds"
+folder_file_2023_data_test = "Processed_Data/post_peak_testing_data/max_df_2023_testing.rds"
 
 # data_2011_old <- read.table(file = paste0(base_path_data, folder_file_2011_old_data), header = FALSE)
 # Whole period data
@@ -152,9 +152,9 @@ data_2023_pp_forecast_w_parameters_2023_pp_95 <- prediction_with_max(input_data_
 data_2023_pp_forecast_w_parameters_2023_pp_99 <- prediction_with_max(input_data_df = data_2023_test, input_param_df = parameters_2023_pp, alpha = 0.01)
 
 ## 2011 new parameters
-data_2023_pp_forecast_w_parameters_2023_new_90 <- prediction_with_max(input_data_df = data_2023_test, input_param_df = parameters_2011_new, alpha = 0.10)
-data_2023_pp_forecast_w_parameters_2023_new_95 <- prediction_with_max(input_data_df = data_2023_test, input_param_df = parameters_2011_new, alpha = 0.05)
-data_2023_pp_forecast_w_parameters_2023_new_99 <- prediction_with_max(input_data_df = data_2023_test, input_param_df = parameters_2011_new, alpha = 0.01)
+data_2023_pp_forecast_w_parameters_2011_new_90 <- prediction_with_max(input_data_df = data_2023_test, input_param_df = parameters_2011_new, alpha = 0.10)
+data_2023_pp_forecast_w_parameters_2011_new_95 <- prediction_with_max(input_data_df = data_2023_test, input_param_df = parameters_2011_new, alpha = 0.05)
+data_2023_pp_forecast_w_parameters_2011_new_99 <- prediction_with_max(input_data_df = data_2023_test, input_param_df = parameters_2011_new, alpha = 0.01)
 
 ##### Table 2 #####
 ## 2011 Whole (first row)
@@ -201,7 +201,44 @@ data_2023_pp_forecast_w_parameters_2023_pp_95$coverage_table_grand
 data_2023_pp_forecast_w_parameters_2011_new_99$coverage_table_grand
 data_2023_pp_forecast_w_parameters_2023_pp_99$coverage_table_grand
 
+# Load in table formatting code
+source(paste0(your_path_to_prediction, "create_coverage_table.R"))
 
+##### Figure S25 ######
+create_coverage_table(data_2011_new_forecast_w_parameters_2011_new_90, year_data = 2011, year_parameters = 2011, alpha = 0.1)
+
+##### Figure S26 ######
+create_coverage_table(data_2011_new_forecast_w_parameters_2011_new_95, year_data = 2011, year_parameters = 2011, alpha = 0.05)
+
+##### Figure S27 ######
+create_coverage_table(data_2011_new_forecast_w_parameters_2011_new_99, year_data = 2011, year_parameters = 2011, alpha = 0.01)
+
+##### Figure S28 ######
+create_coverage_table(data_2017_forecast_w_parameters_2011_new_90, year_data = 2017, year_parameters = 2011, alpha = 0.1)
+
+##### Figure S29 ######
+create_coverage_table(data_2017_forecast_w_parameters_2011_new_95, year_data = 2017, year_parameters = 2011, alpha = 0.05)
+
+##### Figure S30 ######
+create_coverage_table(data_2017_forecast_w_parameters_2011_new_99, year_data = 2017, year_parameters = 2011, alpha = 0.01)
+
+##### Figure S31 ######
+create_coverage_table(data_2022_forecast_w_parameters_2011_new_90, year_data = 2022, year_parameters = 2011, alpha = 0.1)
+
+##### Figure S32 ######
+create_coverage_table(data_2022_forecast_w_parameters_2011_new_95, year_data = 2022, year_parameters = 2011, alpha = 0.05)
+
+##### Figure S33 ######
+create_coverage_table(data_2022_forecast_w_parameters_2011_new_99, year_data = 2022, year_parameters = 2011, alpha = 0.01)
+
+##### Figure S34 ######
+create_coverage_table(data_2023_forecast_w_parameters_2011_new_90, year_data = 2023, year_parameters = 2011, alpha = 0.1)
+
+##### Figure S35 ######
+create_coverage_table(data_2023_forecast_w_parameters_2011_new_95, year_data = 2023, year_parameters = 2011, alpha = 0.05)
+
+##### Figure S36 ######
+create_coverage_table(data_2023_forecast_w_parameters_2011_new_99, year_data = 2023, year_parameters = 2011, alpha = 0.01)
 
 
 # 2017 using 2011 new parameters
@@ -224,5 +261,4 @@ breach_2022_forecast_w_parameters_2011_new_95 <- create_breach_table_and_viz_und
 
 ##### Figure S39 #####
 breach_2023_forecast_w_parameters_2011_new_95 <- create_breach_table_and_viz_undiff(input_df = data_2023_forecast_w_parameters_2011_new_95$predicted_data_df, flare_start_point = 494, forecast_year_and_desc = "2023 Data with 2011 New Parameters")
-
 
