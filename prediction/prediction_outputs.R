@@ -25,7 +25,7 @@ library(latex2exp)
 # folder_file_2011_old_parameter = "Run\ from\ 7.28.2022/parameter3_clean_debug_flag_0_2024-02-19.csv"
 # folder_file_2011_old_parameter_r2 = "Solar_Flare_2011_new_data/parameter3_clean_debug_flag_0_2024-06-10.csv"
 folder_file_2011_new_parameter = "Solar_Flare_2011_new_data/parameter3_clean_debug_flag_0_2024-08-30.csv"
-folder_file_2017_parameter_pp = "Solar_Flare_2017_cut_burnin10/parameter3_clean_debug_flag_0_2026-08-22.csv" # Old, long-burn in
+folder_file_2017_parameter_pp = "Solar_Flare_2017_cut_burnin10/parameter3_clean_debug_flag_0_2026-08-22.csv" # Uses short burn-in
 folder_file_2022_parameter_pp = "Solar_Flare_2022_cut/parameter3_clean_debug_flag_0_2026-08-21.csv"
 folder_file_2023_parameter_pp = "Solar_Flare_2023_cut/parameter3_clean_debug_flag_0_2026-08-21.csv"
 # folder_file_2022_parameter = "Solar_Flare_2022_new_data/parameter3_clean_debug_flag_0_2024-08-30.csv"
@@ -54,7 +54,7 @@ parameters_2023_pp <- read.csv(file = paste0(your_path_to_parameters, folder_fil
 # ### Data - read in the .rds files
 # base_path_data = "~/Documents/GitHub/solar_flare_project/"
 
-# The parameters should be saved in these subfolders
+# The data should be saved in these subfolders
 # folder_file_2011_old_data = "data.txt"
 folder_file_2011_new_data = "Processed_Data/2011_Data_Para_Input_Files_New/max_df_2011_new_2024-06-10.rds"
 folder_file_2017_data = "Processed_Data/2017_Data_Para_Input_Files_New/max_df_2017_new_2026-02-16.rds"
@@ -104,6 +104,7 @@ source(paste0(your_path_to_prediction, "prediction_core.R"))
 data_2011_new_forecast_w_parameters_2011_new_90 <- prediction_with_max(input_data_df = data_2011_new, input_param_df = parameters_2011_new, alpha = 0.1)
 data_2011_new_forecast_w_parameters_2011_new_95 <- prediction_with_max(input_data_df = data_2011_new, input_param_df = parameters_2011_new, alpha = 0.05)
 data_2011_new_forecast_w_parameters_2011_new_99 <- prediction_with_max(input_data_df = data_2011_new, input_param_df = parameters_2011_new, alpha = 0.01)
+
 
 # 2017 whole period data
 ## 2011 new parameters

@@ -3,6 +3,7 @@
 
 # Load in libraries
 library(tidyverse)
+library(ggtext)
 
 # Read in the data
 s1000_NSF.r1c1_True <- c(1000, "NSF.r1c1", "True Value", -3.914, 0, 29.023, 15.782, 6.632, 21.873, 5.404, 0, 1.523, 0.022, 0, NA,102.532)
