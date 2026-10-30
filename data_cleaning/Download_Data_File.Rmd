@@ -1,0 +1,1598 @@
+---
+title: "Flare Pulls"
+output: html_notebook
+---
+
+This code is written as a .Rmd file because it contains both R and Python chunks. (See {r} or {python} at the top of each chunk.)
+
+It is recommended to clear your environment before running this code, as the files can be extremely large. 
+Also, note that changes in the supporting packages may cause issues with the data pulls from the source.
+
+These are the main sections of this file.
+
+0.  Setup
+1.  Download Data Using Sunpy
+2.  Clean data
+3.  Export Data
+
+# 0. Setup
+
+```{r}
+# Read in the reticulate package - this is necessary for working with Python.
+library(reticulate)
+```
+
+```{r}
+# This was necessary to download the data using Fetch
+py_run_string("
+import ssl, certifi, os
+os.environ['SSL_CERT_FILE'] = certifi.where()
+os.environ['REQUESTS_CA_BUNDLE'] = certifi.where()
+ssl._create_default_https_context = lambda: ssl.create_default_context(cafile=certifi.where())
+")
+```
+
+```{r}
+# Install packages into the virtual environment
+# Periodically run this to update packages
+# py_install("pandas")
+# py_install("scipy")
+# py_install("sunpy")
+# py_install("Fido")
+# py_install("attrs")
+# py_install("matplotlib")
+# py_install("requests")
+# py_install("bs4")
+# py_install("lxml")
+# py_install("zeep")
+# py_install("drms")
+# py_install("reproject")
+# py_install("numpy")
+```
+
+```{r}
+# Import the key packages
+scipy <- import("scipy")
+pandas <- import("pandas")
+sunpy <- import("sunpy")
+matplotlib <- import("matplotlib")
+requests <- import("requests")
+bs4 <- import("bs4")
+lxml <- import("lxml")
+zeep <- import("zeep")
+drms <- import("drms")
+reproject <- import("reproject")
+np <- import("numpy")
+os <- import("os")
+certifi <- import("certifi")
+```
+
+## Switch to Python
+
+```{python}
+import numpy as np
+import os
+```
+
+```{python}
+# Let's try this using Fido
+from sunpy.net import Fido, attrs as a
+```
+
+```{python}
+# Import the certifi package
+import certifi
+```
+
+# 1. Download Data Using Sunpy
+
+```{python}
+# Check and see if there's data for 2011
+import astropy.units as u
+
+# Match the query from earlier - 2011
+results_2011 = Fido.search(a.Time('2011/4/30 21:30', '2011/4/30 22:30'),a.Instrument.aia,
+            a.Wavelength(193*u.angstrom))
+results_2011.show
+```
+
+```{python}
+# 2017 Flare ID SOL2017-09-04T20:28:00L120C101
+
+# Match the query from earlier - 2022
+results_2017 = Fido.search(a.Time('2017/09/04 19:00', '2017/09/04 22:00'),a.Instrument.aia,
+            a.Wavelength(193*u.angstrom))
+results_2017.show
+# Looks good 
+```
+
+```{python}
+# 2022 Flare ID SOL2022-02-04T15:39:00L121C075
+
+# Match the query from earlier - 2022
+results_2022 = Fido.search(a.Time('2022/2/04 14:00', '2022/2/04 17:00'),a.Instrument.aia,
+            a.Wavelength(193*u.angstrom))
+            
+results_2022.show
+# Looks good 
+```
+
+```{python}
+# 2023 Flare ID SOL2023-12-31T21:36:00L149C086
+
+# Match the query from earlier - 2022
+results_2023 = Fido.search(a.Time('2023/12/31 20:00', '2023/12/31 23:00'),a.Instrument.aia,
+            a.Wavelength(193*u.angstrom))
+            
+results_2023.show
+# Looks good 
+```
+
+
+```{python}
+# This function pulls data from the source for a given start time, end time, and with a given filepath that has
+# already been created.
+
+# Do not use this carelessly as the files can be enormous. Use the one record flag option first.
+
+def download_data(start_time, end_time, filepath, password, one_record_flag = 1):
+   # Pull data
+   results = Fido.search(a.Time(start_time, end_time),a.Instrument.aia, a.Wavelength(193*u.angstrom))
+   # Print the results
+   print(results.show)
+   # Print a warning
+   print("WARNING: Please carefully review the results above. You will be downloading them to the filepath you specified in the function. Large downloads can be dangerous. If the password is not correct, then the download will not begin")
+   # users_choice = input("WARNING: Please carefully review the results above. You will be downloading them to the filepath you specified in the function. Type YES to download, knowing that such large downloads can be dangerous.")
+   # Return the user choice
+   if (password == "YES_I_UNDERSTAND"):
+     print("You have entered the correct password of " + password + ". Your download will begin shortly to location " + filepath)
+     # Compute the full filepath
+     full_filepath = filepath + '{file}'
+     # Begin the download
+     if (one_record_flag == 1):
+       print("You are downloading one file.")
+       downloaded_files = Fido.fetch(results[0, 0], path=full_filepath)
+     else:
+       print("WARNING: You are downloading all files specified above!")
+       downloaded_files = Fido.fetch(results, path=full_filepath)
+     # downloaded_files = Fido.fetch(results, path=full_filepath)  
+   else:
+     print("You have entered the incorrect password of " + password + ". The download will not begin.")
+```
+
+```{python}
+# Test the function - RUN THIS CAREFULLY! This is for the 2011 pull
+# download_data('2011/4/30 21:30', '2011/4/30 22:30', filepath = "~/Fetch_20110430_AIA_193_Pull/")
+```
+
+```{python}
+# Redownloading Data
+# download_data('2022/2/04 14:00', '2022/2/04 17:00', filepath = "~/Fetch_20220204_AIA_193_Pull_v2/")
+```
+
+```{python}
+# Test the function - RUN THIS CAREFULLY! This is for the 2022 pull
+# download_data('2022/2/04 14:00', '2022/2/04 17:00', filepath = "~/Fetch_20220204_AIA_193_Pull/")
+
+# Run the function for the entire thing.
+# download_data('2022/2/04 14:00', '2022/2/04 17:00', filepath = "~/Fetch_20220204_AIA_193_Pull/")
+```
+
+```{python}
+# Redownloading Data
+# download_data('2022/2/04 14:00', '2022/2/04 17:00', filepath = "~/Fetch_20220204_AIA_193_Pull_v2/")
+```
+
+```{python}
+# Test the function - RUN THIS CAREFULLY! This is for the 2023 pull
+# download_data('2023/12/31 20:00', '2023/12/31 23:00', filepath = "~/Fetch_20231231_AIA_193_Pull/")
+```
+
+```{python}
+# 2017 Flare ID SOL2017-09-04T20:28:00L120C101
+# results_2017 = Fido.search(a.Time('2017/09/04 19:00', '2017/09/04 22:00'),a.Instrument.aia,
+#             a.Wavelength(193*u.angstrom))
+
+# Test the function - RUN THIS CAREFULLY! This is for the 2017 pull
+# download_data('2017/09/04 19:00', '2017/09/04 22:00', filepath = "~/Fetch_20170904_AIA_193_Pull/",
+# password = "YES_I_UNDERSTAND")
+
+# download_data('2017/09/04 19:00', '2017/09/04 22:00', filepath = "~/Fetch_20170904_AIA_193_Pull/",
+# password = "YES_I_UNDERSTAND")
+```
+
+```{r}
+# # Debugging issue on 2.12.2026
+# reticulate::py_config() 
+# reticulate::py_install("certifi", pip = TRUE)
+# # From ChatGPT
+# 
+# # Force python to use certifi bundle
+# library(reticulate)
+# certifi <- import("certifi")
+# Sys.setenv(SSL_CERT_FILE = certifi$where())
+# 
+# # Test
+# requests <- import("requests")
+# requests$get("https://sdo7.nascom.nasa.gov")
+# 
+# 
+# reticulate::py_run_string("
+# import ssl
+# import sys
+# print(sys.version)
+# print(ssl.OPENSSL_VERSION)
+# ")
+# 
+# requests$get("https://www.google.com")
+# 
+# requests$get("https://sdo7.nascom.nasa.gov", verify = FALSE)
+# 
+# # reticulate::py_run_string("
+# # from sunpy.net import jsoc
+# # print(jsoc.JSOCClient())
+# # ")
+
+```
+
+## Looking at the first image of all three frames
+
+```{r}
+reticulate::py_install("sunpy[all]", pip = TRUE)
+reticulate::py_install("sunpy[map]", pip = TRUE)
+# Fix the issue with matplotlib
+reticulate::py_install("matplotlib<3.7", pip = TRUE)
+```
+
+```{python}
+import sunpy
+print(sunpy.__version__)
+```
+
+
+```{python}
+import sunpy.map
+```
+
+```{python}
+import sunpy.map
+from astropy.io import fits
+import sunpy.data.sample
+mymap = sunpy.map.Map(sunpy.data.sample.AIA_171_IMAGE)
+```
+
+```{python}
+# Try loading this file in and then doing stuff with it
+import sunpy.map
+
+# Load in the image. You'll need to update this.=
+first_image_2011 = sunpy.map.Map("~/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t21_34_07_84z_image_lev1.fits")
+first_image_2022 = sunpy.map.Map("~/Fetch_20220204_AIA_193_Pull_v2/aia_lev1_193a_2022_02_04t14_00_52_84z_image_lev1.fits")
+first_image_2023 = sunpy.map.Map("~/Fetch_20231231_AIA_193_Pull/aia_lev1_193a_2023_12_31t20_00_16_85z_image_lev1.fits")
+first_image_2017 = sunpy.map.Map("~/20170904_AIA_193_Pull_v2/aia.lev1_euv_12s.2017-09-04T190007Z.193.image_lev1.fits")
+
+```
+
+```{python}
+# Check out the metadata
+first_image_2011
+first_image_2022
+first_image_2023
+first_image_2017
+
+```
+
+```{python}
+# Look at the images
+first_image_2011.quicklook()
+first_image_2022.quicklook()
+first_image_2023.quicklook()
+first_image_2017.quicklook()
+```
+
+```{python}
+# Look at the data
+# fi_array_2011 = first_image_2011.data
+# fi_array_2022 = first_image_2022.data
+# fi_array_2023 = first_image_2023.data
+```
+
+## Summary Statistics
+
+```{python}
+# first_image_2011.data[1,931]
+# Look at summary statistics
+first_image_2011.min()
+first_image_2011.max()
+first_image_2011.mean()
+
+# Look at summary statistics
+first_image_2022.min()
+first_image_2022.max()
+first_image_2022.mean()
+
+# Look at summary statistics
+first_image_2023.min()
+first_image_2023.max()
+first_image_2023.mean()
+
+# Look at summary statistics
+first_image_2017.min()
+first_image_2017.max()
+first_image_2017.mean()
+
+
+# Look at the coordinates
+# first_image_2011.coordinate_frame  
+```
+
+# 2. Clean the Data
+
+## Checklists
+
+### Checklist - 2011
+
+```{python}
+# Solar Object Locator: SOL2011-04-30T21-45-49L061C108
+# Find the exact location - L 61 (longitude), C 108 (latitude)
+# Find the exact time - 21:45:49
+# Download the data - Done
+# Use the frame nearest to this without going past it and build a box around this
+# For simplicity, assume it doesn't change much over the hour
+# Assuming a rotation of 27.2753 days, and we have an hour of data,
+# the sun will rotate 0.001528 or about 0.15%
+```
+
+### Checklist - 2022
+
+```{python}
+# Solar Object Locator: SOL2022-02-04T15:39:00L121C075
+# Find the exact location - L 121 (longitude), C 075 (co-latitude)
+# Find the exact time - 15:39:00
+# Download the data - Done
+# Use the frame nearest to this without going past it and build a box around this
+# For simplicity, assume it doesn't change much over the hour
+# Assuming a rotation of 27.2753 days, and we have three hours of data
+# the sun will rotate 0.004583 or about 0.45%
+```
+
+### Checklist - 2023
+
+```{python}
+# Solar Object Locator: SOL2023-12-31T21:36:00L149C086
+# Find the exact location - L 149 (longitude), C 086 (co-latitude)
+# Find the exact time - 21:36:00
+# Download the data - Done
+# Use the frame nearest to this without going past it and build a box around this
+# For simplicity, assume it doesn't change much over the hour
+# Assuming a rotation of 27.2753 days, and we have three hours of data
+# the sun will rotate 0.004583 or about 0.45%
+```
+
+### Checklist - 2017
+
+```{python}
+# Solar Object Locator: SOL2017-09-04T20:28:00L120C101
+# Find the exact location - L 120 (longitude), C 101 (co-latitude)
+# Find the exact time - 20:28:00
+# Download the data - Done
+# Use the frame nearest to this without going past it and build a box around this
+# For simplicity, assume it doesn't change much over the hour
+# Assuming a rotation of 27.2753 days, and we have three hours of data
+# the sun will rotate 0.004583 or about 0.45%
+```
+
+```{python}
+import matplotlib.pyplot as plt
+
+import astropy.units as u
+from astropy.coordinates import SkyCoord
+
+import sunpy.data.sample
+import sunpy.map
+
+import numpy as np
+
+import os
+```
+
+## Checks before cutting - 2011
+
+### Whole Plot - 2011
+
+```{python}
+# Solar Object Locator SOL2011-04-30T21-45-49L061C108
+
+# Establish the reference coordinates and obstime
+lon_2011 = 61
+colat_2011 = 108
+obstime_2011 = "2011/04/30T21:45:49"
+image_ref_2011 = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t21_45_43_84z_image_lev1.fits"
+
+# Load in the filepath - this is the last image before the flare based on the solar object locator
+ref_image_2011 = sunpy.map.Map(image_ref_2011)
+
+
+# Feed these into the SkyCoord system. Note that the co-latitude was established from empirical verification
+ref_point_2011 = SkyCoord(lon = lon_2011*u.deg, lat = (90-colat_2011)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2011)
+
+# Plot the image
+amap_2011 = sunpy.map.Map(ref_image_2011)  
+amap_2011.coordinate_frame 
+fig_2011 = plt.figure()
+ax_2011 = plt.subplot(projection=amap_2011)  
+amap_2011.plot()  
+ax_2011.plot_coord(ref_point_2011, 'o')  
+plt.show()
+```
+
+### Subplot - 2011
+
+```{python}
+lon_add_2011 = 8
+lat_add_2011 = 4
+
+# Add 20 to longitude and add 10 to the latitude for the top right
+top_right_2011 = SkyCoord(lon = (lon_2011+lon_add_2011)*u.deg, lat = (90-colat_2011+lat_add_2011)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2011)
+
+# Establish bottom-left coordinates
+bottom_left_2011 = SkyCoord(lon = (lon_2011-lon_add_2011)*u.deg, lat = (90-colat_2011-lat_add_2011)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2011)
+
+# Subset the image
+ref_image_sub_2011 = ref_image_2011.submap(bottom_left = bottom_left_2011, top_right=top_right_2011)
+
+# Plot stuff
+fig_sub_2011 = plt.figure()
+ax_2011 = fig_sub_2011.add_subplot(projection=ref_image_sub_2011)
+image_2011 = ref_image_sub_2011.plot(axes=ax_2011)
+ref_image_sub_2011.draw_limb(axes=ax_2011)
+ref_image_sub_2011.draw_grid(axes=ax_2011)
+
+# Make some room and put the title at the top of the figure
+ax_2011.set_position([0.1, 0.1, 0.8, 0.7])
+ax_2011.set_title(ax_2011.get_title(), pad=45)
+
+plt.show()
+
+# Extract the array
+da_2011 = ref_image_sub_2011.data # This extracts the array
+da_2011.shape # This gives us dimensions
+```
+
+## Checks before cutting - 2022
+
+### Whole Plot - 2022
+
+```{python}
+# Solar Object Locator SOL2022-02-04T15:39:00L121C075
+
+# Establish the reference coordinates and obstime
+lon_2022 = 121
+colat_2022 = 75
+obstime_2022 = "2022/02/04T15:39:00"
+image_ref_2022 = "/Users/stevenmoen/Fetch_20220204_AIA_193_Pull_v2/aia_lev1_193a_2022_02_04t15_38_52_84z_image_lev1.fits" 
+
+# Load in the filepath - this is the last image before the flare based on the solar object locator
+ref_image_2022 = sunpy.map.Map(image_ref_2022)
+
+
+# Feed these into the SkyCoord system. Note that the co-latitude was established from empirical verification
+ref_point_2022 = SkyCoord(lon = lon_2022*u.deg, lat = (90-colat_2022)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2022)
+
+# Plot the image
+amap_2022 = sunpy.map.Map(ref_image_2022)  
+amap_2022.coordinate_frame 
+fig_2022 = plt.figure()
+ax_2022 = plt.subplot(projection=amap_2022)  
+amap_2022.plot()  
+ax_2022.plot_coord(ref_point_2022, 'o')  
+plt.show()
+```
+
+### Subplot - 2022
+
+```{python}
+lon_add_2022 = 8
+lat_add_2022 = 4
+
+# Add 20 to longitude and add 10 to the latitude for the top right
+top_right_2022 = SkyCoord(lon = (lon_2022+lon_add_2022)*u.deg, lat = (90-colat_2022+lat_add_2022)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2022)
+
+# Establish bottom-left coordinates
+bottom_left_2022 = SkyCoord(lon = (lon_2022-lon_add_2022)*u.deg, lat = (90-colat_2022-lat_add_2022)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2022)
+
+# Subset the image
+ref_image_sub_2022 = ref_image_2022.submap(bottom_left = bottom_left_2022, top_right=top_right_2022)
+
+# Plot stuff
+fig_sub_2022 = plt.figure()
+ax_2022 = fig_sub_2022.add_subplot(projection=ref_image_sub_2022)
+image_2022 = ref_image_sub_2022.plot(axes=ax_2022)
+ref_image_sub_2022.draw_limb(axes=ax_2022)
+ref_image_sub_2022.draw_grid(axes=ax_2022)
+
+# Make some room and put the title at the top of the figure
+ax_2022.set_position([0.1, 0.1, 0.8, 0.7])
+ax_2022.set_title(ax_2022.get_title(), pad=45)
+
+plt.show()
+
+# Extract the array
+da_2022 = ref_image_sub_2022.data # This extracts the array
+da_2022.shape # This gives us dimensions
+```
+
+## Checks before cutting - 2023
+
+### Whole Plot - 2023
+
+```{python}
+# Solar Object Locator SOL2023-12-31T21:36:00L149C086
+
+# Establish the reference coordinates and obstime
+lon_2023 = 149
+colat_2023 = 86
+obstime_2023 = "2023/12/31T21:36:00"
+image_ref_2023 = "/Users/stevenmoen/Fetch_20231231_AIA_193_Pull/aia_lev1_193a_2023_12_31t21_35_52_85z_image_lev1.fits"
+
+# Load in the filepath - this is the last image before the flare based on the solar object locator
+ref_image_2023 = sunpy.map.Map(image_ref_2023)
+
+
+# Feed these into the SkyCoord system. Note that the co-latitude was established from empirical verification
+ref_point_2023 = SkyCoord(lon = lon_2023*u.deg, lat = (90-colat_2023)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2023)
+
+# Plot the image
+amap_2023 = sunpy.map.Map(ref_image_2023)  
+amap_2023.coordinate_frame 
+fig_2023 = plt.figure()
+ax_2023 = plt.subplot(projection=amap_2023)  
+amap_2023.plot()  
+ax_2023.plot_coord(ref_point_2023, 'o')  
+plt.show()
+```
+
+### Subplot - 2023
+
+```{python}
+lon_add_2023 = 8
+lat_add_2023 = 4
+
+# Add 20 to longitude and add 10 to the latitude for the top right
+top_right_2023 = SkyCoord(lon = (lon_2023+lon_add_2023)*u.deg, lat = (90-colat_2023+lat_add_2023)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2023)
+
+# Establish bottom-left coordinates
+bottom_left_2023 = SkyCoord(lon = (lon_2023-lon_add_2023)*u.deg, lat = (90-colat_2023-lat_add_2023)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2023)
+
+# Subset the image
+ref_image_sub_2023 = ref_image_2023.submap(bottom_left = bottom_left_2023, top_right=top_right_2023)
+
+# Plot stuff
+fig_sub_2023 = plt.figure()
+ax_2023 = fig_sub_2023.add_subplot(projection=ref_image_sub_2023)
+image_2023 = ref_image_sub_2023.plot(axes=ax_2023)
+ref_image_sub_2023.draw_limb(axes=ax_2023)
+ref_image_sub_2023.draw_grid(axes=ax_2023)
+
+# Make some room and put the title at the top of the figure
+ax_2023.set_position([0.1, 0.1, 0.8, 0.7])
+ax_2023.set_title(ax_2023.get_title(), pad=45)
+
+plt.show()
+
+# Extract the array
+da_2023 = ref_image_sub_2023.data # This extracts the array
+da_2023.shape # This gives us dimensions
+```
+
+## Checks before cutting - 2017
+
+### Whole Plot - 2017
+
+```{python}
+# Solar Object Locator SOL2017-09-04T20:28:00L120C101
+
+# Establish the reference coordinates and obstime
+lon_2017 = 120
+colat_2017 = 101
+obstime_2017 = "2017/09/04T20:29:00"
+image_ref_2017 = "~/20170904_AIA_193_Pull_v2/aia.lev1_euv_12s.2017-09-04T202754Z.193.image_lev1.fits"
+
+# Load in the filepath - this is the last image before the flare based on the solar object locator
+ref_image_2017 = sunpy.map.Map(image_ref_2017)
+
+# Feed these into the SkyCoord system. Note that the co-latitude was established from empirical verification
+ref_point_2017 = SkyCoord(lon = lon_2017*u.deg, lat = (90-colat_2017)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2017)
+
+# Plot the image
+amap_2017 = sunpy.map.Map(ref_image_2017)  
+amap_2017.coordinate_frame 
+fig_2017 = plt.figure()
+ax_2017 = plt.subplot(projection=amap_2017)  
+amap_2017.plot()  
+ax_2017.plot_coord(ref_point_2017, 'o')  
+plt.show()
+```
+
+### Subplot - 2017
+
+```{python}
+lon_add_2017 = 8
+lat_add_2017 = 4
+
+# Add 20 to longitude and add 10 to the latitude for the top right
+top_right_2017 = SkyCoord(lon = (lon_2017+lon_add_2017)*u.deg, lat = (90-colat_2017+lat_add_2017)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2017)
+
+# Establish bottom-left coordinates
+bottom_left_2017 = SkyCoord(lon = (lon_2017-lon_add_2017)*u.deg, lat = (90-colat_2017-lat_add_2017)*u.deg, frame="heliographic_carrington", observer="earth", obstime=obstime_2017)
+
+# Subset the image
+ref_image_sub_2017 = ref_image_2017.submap(bottom_left = bottom_left_2017, top_right=top_right_2017)
+
+# Plot stuff
+fig_sub_2017 = plt.figure()
+ax_2017 = fig_sub_2017.add_subplot(projection=ref_image_sub_2017)
+image_2017 = ref_image_sub_2017.plot(axes=ax_2017)
+ref_image_sub_2017.draw_limb(axes=ax_2017)
+ref_image_sub_2017.draw_grid(axes=ax_2017)
+
+# Make some room and put the title at the top of the figure
+ax_2017.set_position([0.1, 0.1, 0.8, 0.7])
+ax_2017.set_title(ax_2017.get_title(), pad=45)
+
+plt.show()
+
+# Extract the array
+da_2017 = ref_image_sub_2017.data # This extracts the array
+da_2017.shape # This gives us dimensions
+```
+
+## Write function to pull and subset data
+
+```{python}
+def subset_data(ref_c_lon, ref_c_lat, lon_add, lat_add, ref_time, image_path, plot_whole_flag = 0, plot_sub_flag = 0):
+  # Load in the filepath - this is the last image before the flare
+  ref_image = sunpy.map.Map(image_path)
+  # Plot the data, if plot_whole_flag is enabled
+  ref_point = SkyCoord(lon = ref_c_lon*u.deg, lat = (90-ref_c_lat)*u.deg, frame="heliographic_carrington", observer="earth", obstime=ref_time)
+  # Set up the plot
+  # Uncomment this
+  # amap = sunpy.map.Map(ref_image)  
+  # amap.coordinate_frame 
+  # fig = plt.figure()
+  # ax = plt.subplot(projection=amap)  
+  # amap.plot()  
+  # ax.plot_coord(ref_point, 'o')  
+  
+  # plt.show()
+  # Plot the image
+  # if(plot_whole_flag = 1):
+  
+  # plt.show()
+  # This is the upper right of the box
+  top_right = SkyCoord(lon = (ref_c_lon+lon_add)*u.deg, lat = (90-ref_c_lat+lat_add)*u.deg, frame="heliographic_carrington", observer="earth", obstime=ref_time)
+  # This is the lower left side of the box
+  bottom_left = SkyCoord(lon = (ref_c_lon-lon_add)*u.deg, lat = (90-ref_c_lat-lat_add)*u.deg, frame="heliographic_carrington", observer="earth", obstime=ref_time)
+  # Subset the image
+  ref_image_sub = ref_image.submap(bottom_left, top_right=top_right)
+  # Plot the subplot
+  # Uncomment this later
+  # fig_sub = plt.figure()
+  # ax_sub = fig_sub.add_subplot(projection=ref_image_sub)
+  # image_sub = ref_image_sub.plot(axes=ax_sub)
+  # ref_image_sub.draw_limb(axes=ax_sub)
+  # ref_image_sub.draw_grid(axes=ax_sub)
+  # 
+  # # Make some room and put the title at the top of the figure
+  # ax_sub.set_position([0.1, 0.1, 0.8, 0.7])
+  # ax_sub.set_title(ax_sub.get_title(), pad=45)
+  
+  # plt.show()
+
+  # Extract the array
+  output_array = ref_image_sub.data
+  # Plot the data if plot_flag is enabled
+  # Return the array
+  return(output_array)
+```
+
+## Test the function - 2011
+
+```{python}
+# Test the function - 2011
+start_image_2011 = subset_data(ref_c_lon = 61, ref_c_lat = 108, lon_add = 8, lat_add = 4, ref_time = "2011/04/30T21:45:49", image_path = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t21_45_43_84z_image_lev1.fits", plot_whole_flag = 1)
+
+# Test the function - 2011
+end_image_2011 = subset_data(ref_c_lon = 61, ref_c_lat = 108, lon_add = 8, lat_add = 4, ref_time = "2011/04/30T21:45:49", image_path = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t22_29_55_84z_image_lev1.fits", plot_whole_flag = 1)
+
+# Check the dimensions
+shape_1 = start_image_2011.shape
+shape_2 = end_image_2011.shape
+
+# Convert to a list
+# t = (1, 2, 3, 4)   # t is the tuple (1, 2, 3, 4)
+list_1 = list(shape_1)
+list_2 = list(shape_2)
+# >>> l = list(t)        # l is the list [1, 2, 3, 4]
+
+# Extend the list
+# list_2 = list_2.extend(list_1)
+
+# Start with a blank list
+start_list = list()
+
+# Append the list
+start_list.append(list_1)
+start_list.append(list_2)
+
+# Convert the list
+arr = np.array(start_list, dtype='float32')
+
+# Find min and max of each column
+mins = np.amin(arr, axis=0)
+maxes = np.amax(arr, axis=0)
+
+# arr.shape
+# list_1.extend(start_list)
+
+# np.min(end_image_2011)
+```
+
+## Write a function to find the minimum and maximum number of rows and columns in each of the images
+
+```{python}
+def find_dimensions(image_location, ref_c_lon, ref_c_lat, lon_add, lat_add, ref_time):
+  # Extract the list of all images
+  image_list = sorted(os.listdir(image_location))
+  # Print a test 
+  # print("You have now extracted the image list")
+  # Remove the .DS store  - may not be required!
+  image_list.remove(".DS_Store")
+  # Remove the .spikes.fits files - may not be required!
+  image_list = [f for f in image_list if not f.endswith(".spikes.fits")]
+  # Print the length of the list
+  length_list = len(image_list)
+  print("These are the number of images in the list")
+  print(length_list)
+  # Define a counter variable
+  i = 0
+  # Initialize a list
+  sto_list = list()
+  # Run the previous function 
+  for x in range(length_list):
+    # Pull the data
+    da = subset_data(ref_c_lon = ref_c_lon, ref_c_lat = ref_c_lat, lon_add = lon_add, lat_add = lat_add, ref_time = ref_time, image_path = image_location + image_list[i])
+    # Extract the shape
+    shape_da = da.shape
+    # print(shape_da)
+    # Convert to a list
+    shape_list = list(shape_da)
+    # Append the list
+    sto_list.append(shape_list)
+    # Print the list 
+    # print(shape_list)
+    # Update the count
+    i = i + 1
+  # Compute the min and the max
+  shape_array = np.array(sto_list, dtype='float32')
+  # Find min and max of each column
+  mins = np.amin(shape_array, axis=0)
+  maxes = np.amax(shape_array, axis=0)
+  # Print the mins and maxes
+  print("This is the minimum number of rows and the minimum number of columns in the images. They may not correspond to the same image.")
+  print(mins)
+  print("This is the maximum number of rows and the maximum number of columns in the images. They may not correspond to the same image.")
+  print(maxes)
+  # print("Success")
+  # Return sto_mat
+  # return(sto_mat)
+  return(shape_array)
+```
+
+### 2011 - Size Function
+
+```{python}
+# Call the function - 2011
+lon_2011 = 61
+colat_2011 = 108
+obstime_2011 = "2011/04/30T21:45:49"
+image_location_2011 = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/"
+
+dim_2011 = find_dimensions(image_location =  image_location_2011, ref_c_lon = lon_2011, ref_c_lat = colat_2011, lon_add = 8, lat_add = 4, ref_time = obstime_2011)
+
+# print(dim_2011)
+
+# This is the minimum number of rows and the minimum number of columns in the images. They may not correspond to the same image.
+# [239. 301.]
+# This is the maximum number of rows and the maximum number of columns in the images. They may not correspond to the same image.
+# [239. 302.]
+```
+
+### 2022 - Size Function
+
+```{python}
+# Call the function - 2022
+lon_2022 = 121
+colat_2022 = 75
+obstime_2022 = "2022/02/04T15:39:00"
+image_location_2022 = "/Users/stevenmoen/Fetch_20220204_AIA_193_Pull_v2/" 
+
+dim_2022 = find_dimensions(image_location =  image_location_2022, ref_c_lon = lon_2022, ref_c_lat = colat_2022, lon_add = 8, lat_add = 4, ref_time = obstime_2022)
+
+# print(dim_2022)
+
+# np.min(dim_2022)
+# np.max(dim_2022)
+
+# dim_2022.shape
+
+# 262 x 169
+
+# This is the minimum number of rows and the minimum number of columns in the images. They may not correspond to the same image.
+# [262. 169.]
+# This is the maximum number of rows and the maximum number of columns in the images. They may not correspond to the same image.
+# [263. 170.]
+```
+
+### 2023 - Size Function
+
+```{python}
+# Call the function - 2023
+lon_2023 = 149
+colat_2023 = 86
+obstime_2023 = "2023/12/31T21:36:00"
+image_location_2023 = "/Users/stevenmoen/Fetch_20231231_AIA_193_Pull/"
+
+dim_2023 = find_dimensions(image_location =  image_location_2023, ref_c_lon = lon_2023, ref_c_lat = colat_2023, lon_add = 8, lat_add = 4, ref_time = obstime_2023)
+
+np.min(dim_2023)
+np.max(dim_2023)
+
+# This is the minimum number of rows and the minimum number of columns in the images. They may not correspond to the same image.
+# [250.  95.]
+# This is the maximum number of rows and the maximum number of columns in the images. They may not correspond to the same image.
+# [250.  96.]
+
+# 250 x 95
+```
+
+### 2017 - Size Function
+
+```{python}
+# Call the function - 2023
+lon_2017 = 120
+colat_2017 = 101
+obstime_2017 = "2017/09/04T20:28:00"
+image_location_2017 = "/Users/stevenmoen/20170904_AIA_193_Pull_v2/"
+
+dim_2017 = find_dimensions(image_location =  image_location_2017, ref_c_lon = lon_2017, ref_c_lat = colat_2017, lon_add = 8, lat_add = 4, ref_time = obstime_2017)
+
+np.min(dim_2017)
+np.max(dim_2017)
+
+# This is the minimum number of rows and the minimum number of columns in the images. They may not correspond to the same image.
+# [227. 429.]
+# This is the maximum number of rows and the maximum number of columns in the images. They may not correspond to the same image.
+# [227. 430.]
+
+# 227 x 429
+```
+
+## Write function to call the above many times
+
+```{python}
+# Description: This function feeds in .fits images and subsets them around the location (in Carrington coordinates) 
+# specified in the  solar object locator. It stacks the data into an array that can be fed into the R pre-processing code
+
+def pull_all_data(image_location, ref_c_lon, ref_c_lat, lon_add, lat_add, ref_time, rows_per_image, cols_per_image, row_buffer = 0, col_buffer = 0):
+  # Extract the list of all images
+  image_list = sorted(os.listdir(image_location))
+  # Remove the .DS store  - may not be required!
+  image_list.remove(".DS_Store")
+  # Remove the .spikes.fits files - may not be required!
+  image_list = [f for f in image_list if not f.endswith(".spikes.fits")]
+  # Print the length of the list
+  length_list = len(image_list)
+  print("These are the number of images in the list")
+  print(length_list)
+  # Define a counter variable
+  i = 0
+  # Initialize a storage matrix
+  # sto_mat = np.zeros((rows_per_image*length_list, cols_per_image))
+  # Have the storage mat contain -999 to identify problems
+  sto_mat = np.full((rows_per_image*length_list, cols_per_image), -999.)
+  # np.full((239*300,302), -999.)
+  # Run the previous function 
+  for x in range(length_list):
+    # Combine the variables
+    # image_list[i]
+    # print(image_list[i])
+    # full_path = image_location + image_list[i]
+    # print(full_path)
+    # Update the storage matrix
+    # sto_mat[((rows_per_image)*i):((rows_per_image)*(i+1)), 0:(cols_per_image)] = subset_data(ref_c_lon = ref_c_lon, ref_c_lat = ref_c_lat, lon_add = lon_add, lat_add = lat_add, ref_time = ref_time, image_path = image_location + image_list[i])
+    # Pull the data
+    da = subset_data(ref_c_lon = ref_c_lon, ref_c_lat = ref_c_lat, lon_add = lon_add, lat_add = lat_add, ref_time = ref_time, image_path = image_location + image_list[i])
+    # Slide the data
+    sto_mat[((rows_per_image)*i):((rows_per_image)*(i+1)), 0:(cols_per_image)] = da[0:(rows_per_image), 0:(cols_per_image)]
+    # Slice the data
+    # da = subset_data(ref_c_lon = ref_c_lon, ref_c_lat = ref_c_lat, lon_add = lon_add, lat_add = lat_add, ref_time = ref_time, image_path = image_location + image_list[i])
+    # Print the shape of the data
+    # print(da.shape)
+    i = i + 1
+  print("Success")
+  # Return sto_mat
+  return(sto_mat)
+
+```
+
+### Call the function - 2011
+
+```{python}
+# 2011 Flare ID SOL2011-04-30T21-45-49L061C108
+
+# Call the function - 2011
+lon_2011 = 61
+colat_2011 = 108
+obstime_2011 = "2011/04/30T21:45:49"
+image_location_2011 = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/"
+rows_2011 = 239
+cols_2011 = 301
+
+# da_2011 = pull_all_data(image_location =  image_location_2011, ref_c_lon = lon_2011, ref_c_lat = colat_2011, lon_add = 8, lat_add = 4, ref_time = obstime_2011, rows_per_image = rows_2011, cols_per_image = cols_2011)
+```
+
+### Call the function - 2022
+
+```{python}
+# 2022 Flare ID SOL2022-02-04T15:39:00L121C075
+
+lon_2022 = 121
+colat_2022 = 75
+obstime_2022 = "2022/02/04T15:39:00"
+image_location_2022 = "/Users/stevenmoen/Fetch_20220204_AIA_193_Pull_v2/" 
+rows_2022 = 262
+cols_2022 = 169
+# 262 x 169
+
+# da_2022 = pull_all_data(image_location =  image_location_2022, ref_c_lon = lon_2022, ref_c_lat = colat_2022, lon_add = 8, lat_add = 4, ref_time = obstime_2022, rows_per_image = rows_2022, cols_per_image = cols_2022)
+```
+
+```{python}
+# Check the data
+# np.min(da_2022)
+# np.max(da_2022)
+```
+
+### Call the function - 2023
+
+```{python}
+# 2023 Flare ID SOL2023-12-31T21:36:00L149C086
+
+lon_2023 = 149
+colat_2023 = 86
+obstime_2023 = "2023/12/31T21:36:00"
+image_location_2023 = "/Users/stevenmoen/Fetch_20231231_AIA_193_Pull/"
+rows_2023 = 250
+cols_2023 = 95
+# 250 x 95
+
+# da_2023 = pull_all_data(image_location =  image_location_2023, ref_c_lon = lon_2023, ref_c_lat = colat_2023, lon_add = 8, lat_add = 4, ref_time = obstime_2023, rows_per_image = rows_2023, cols_per_image = cols_2023)
+```
+
+```{python}
+# Check the data
+np.min(da_2023)
+np.max(da_2023)
+```
+
+### Call the function - 2017
+
+```{python}
+# 2017 Flare ID SOL2017-09-04T20:28:00L120C101
+
+lon_2017 = 120
+colat_2017 = 101
+obstime_2017 = "2017/09/04T20:28:00"
+image_location_2017 = "/Users/stevenmoen/20170904_AIA_193_Pull_v2/"
+rows_2017 = 227
+cols_2017 = 429
+# 227 x 429
+
+da_2017 = pull_all_data(image_location =  image_location_2017, ref_c_lon = lon_2017, ref_c_lat = colat_2017, lon_add = 8, lat_add = 4, ref_time = obstime_2017, rows_per_image = rows_2017, cols_per_image = cols_2017)
+```
+
+```{python}
+# Check the data
+np.min(da_2017)
+np.max(da_2017)
+
+# The min has increased from the first image, but this makes sense
+# given the way we subset the data
+```
+
+```{python}
+# da_2011 = pull_all_data(image_location =  "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/", ref_c_lon = 61, ref_c_lat = 108, lon_add = 8, lat_add = 4, ref_time = "2011/04/30T21:45:49", rows_per_image = 239, cols_per_image = 301)
+```
+
+## Checking the code on 05.08.2024
+
+```{python}
+# Pull the last image
+end_image_fun_small = subset_data(ref_c_lon = 61, ref_c_lat = 108, lon_add = 8, lat_add = 4, ref_time = "2011/04/30T21:45:49", image_path = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t22_29_55_84z_image_lev1.fits", plot_whole_flag = 1)
+end_image_fun_small.shape
+```
+
+```{python}
+# Pull the first image
+start_image_fun_small = subset_data(ref_c_lon = 61, ref_c_lat = 108, lon_add = 8, lat_add = 4, ref_time = "2011/04/30T21:45:49", image_path = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t21_30_07_84z_image_lev1.fits", plot_whole_flag = 1)
+start_image_fun_small.shape
+start_image_fun_small
+```
+
+```{python}
+# Check things - the first column of the first dataset
+start_image_fun_small[0:239,0]
+da_test_small[0:239,0]
+
+# Check the first row of the first dataset
+start_image_fun_small[0,0:302]
+da_test_small[0,0:302]
+
+# How does the indexing work?
+# start_image_fun_small[0,0:1]
+# It's one more than what's needed
+
+```
+
+```{python}
+# Compare to the big data - check the min
+# np.min(end_image_fun_small) # Looks good
+
+# The bottom right entry should match
+end_image_fun_small[238,300]
+da_test_small[71700-1,301-1]
+
+# Check the last row of the last dataset
+end_image_fun_small[238,:]
+da_test_small[71700-1,:]
+# Looks good. Chopped off the last column
+
+# Check the first row of the last dataset
+end_image_fun_small[0,:]
+da_test_small[71700-1-238,:]
+# Looks good. Chopped off the last column
+
+# Check the min and the max
+np.min(end_image_fun_small)
+np.min(da_test_small[(71700-1-238):(71700-1),:])
+# Good
+
+# Check the max
+np.max(end_image_fun_small)
+np.max(da_test_small[(71700-1-238):(71700-1),:])
+# Good
+
+# Good.
+np.min(da_test_small)
+np.max(da_test_small)
+```
+
+## Data Checks on (05/08)
+
+```{python}
+# Check dimensions
+da_test_small.shape
+
+# Check min and max
+np.min(da_test_small)
+np.max(da_test_small)
+
+# Check mean and medain
+np.mean(da_test_small)
+np.median(da_test_small)
+
+
+```
+
+# 3. Export Data
+
+## 2011 Export
+
+```{python}
+# WARNING!! RUN THIS LINE CAREFULLY!
+# np.savetxt("/Users/stevenmoen/Cleaned_Flare_Data/2011/flare_2011.csv", da_test_small, delimiter = ",")
+```
+
+## 2022 Export
+
+```{python}
+# WARNING!! RUN THIS LINE CAREFULLY!
+# np.savetxt("/Users/stevenmoen/Cleaned_Flare_Data/2022/flare_2022.csv", da_2022, delimiter = ",")
+```
+
+## 2023 Export
+
+```{python}
+# WARNING!! RUN THIS LINE CAREFULLY!
+# np.savetxt("/Users/stevenmoen/Cleaned_Flare_Data/2023/flare_2023.csv", da_2023, delimiter = ",")
+```
+
+## 2017 Export
+
+```{python}
+# WARNING!! RUN THIS LINE CAREFULLY!
+# np.savetxt("/Users/stevenmoen/Cleaned_Flare_Data/2017/flare_2017.csv", da_2017, delimiter = ",")
+```
+
+# APPENDIX
+
+# 1. Download Data Using Sunpy
+
+```{python}
+# def calc():
+#     while(True):
+#         req=input(": ")
+#         if req=="":
+#             break
+#         print(req+"="+str(eval(req)))
+# 
+# calc()
+
+```
+
+```{python}
+# Let's give this a shot. Uncomment this to download
+# downloaded_files = Fido.fetch(results[0, 0], path='/Users/stevenmoen/Documents/Fetch_2011_AIA_193_Test/{file}')  
+```
+
+```{python}
+# Match the query from earlier
+# results = Fido.search(a.Time('2011/4/30 21:30', '2011/4/30 22:30'),a.Instrument.aia,
+            # a.Wavelength(193*u.angstrom))
+# results.show
+
+# downloaded_files = Fido.fetch(results[0, 0], path='/Users/stevenmoen/Documents/Fetch_2011_AIA_193_Test/{file}')  
+```
+
+# 2. Clean the Data
+
+## Carrington Projections
+
+```{python}
+# Try doing a Carrington projection
+import matplotlib.pyplot as plt
+
+# import sunpy.data.sample
+import sunpy.map
+from sunpy.map.header_helper import make_heliographic_header
+```
+
+```{python}
+# aia_map = sunpy.map.Map(first_image)
+
+fig = plt.figure()
+ax = fig.add_subplot(projection=first_image_2011)
+first_image_2011.plot(axes=ax)
+plt.show()
+```
+
+```{python}
+shape = (720, 1440)
+carr_header = make_heliographic_header(first_image_2011.date, first_image_2011.observer_coordinate, shape, frame='carrington')
+```
+
+```{python}
+outmap = first_image_2011.reproject_to(carr_header)
+```
+
+```{python}
+fig = plt.figure()
+ax = fig.add_subplot(projection=outmap)
+outmap.plot(axes=ax)
+outmap.draw_limb(color='blue')
+
+plt.show()
+```
+
+```{python}
+# It seems to me that there has to be a way to look at the data in a clever way
+first_image_2011.center
+
+first_image_2011.wcs
+
+# Try converting to pixels
+center_pixel = first_image_2011.wcs.world_to_pixel(first_image_2011.center)
+
+# Try converting back to world
+first_image_2011.wcs.pixel_to_world(0, 0)
+```
+
+```{python}
+# Work through the coordinate frames
+```
+
+## Upload the reference image
+
+```{python}
+# We need to have a fixed reference point to work with in the image. This will be the closest without going past the flare time.
+
+# aia_lev1_193a_2011_04_30t21_45_43_84z_image_lev1.fits
+# Load in the filepath
+ref_image = sunpy.map.Map("/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t21_45_43_84z_image_lev1.fits")
+
+# This is the closet flare without going past the time of 21:45:49.
+```
+
+## Plot the reference image on the Carrington projection
+
+```{python}
+shape = (720, 1440)
+carr_header = make_heliographic_header(ref_image.date, ref_image.observer_coordinate, shape, frame='carrington')
+```
+
+```{python}
+outmap = ref_image.reproject_to(carr_header)
+```
+
+```{python}
+fig = plt.figure()
+ax = fig.add_subplot(projection=outmap)
+outmap.plot(axes=ax)
+outmap.draw_limb(color='blue')
+
+plt.show()
+```
+
+## Establish a reference point
+
+```{python}
+
+from astropy.coordinates import SkyCoord
+import sunpy.coordinates
+import astropy.units as u
+# Establish a reference point - converting the 108 latitude to 18
+ref_point = SkyCoord(lon = 61*u.deg, lat = (108-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T21:45:49")
+
+ref_point
+
+# Sanity check - the sun should be back to 0 in about 4.5 days
+SkyCoord(lon = 61*u.deg, lat = (108-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/05/04T21:45:49")
+
+```
+
+## Convert to pixels
+
+```{python}
+from astropy.coordinates import SkyCoord
+import astropy.units as u
+
+import sunpy.map
+# from sunpy.data.sample import AIA_171_IMAGE  
+
+amap = sunpy.map.Map(ref_image)  
+amap.coordinate_frame  
+
+# Try converting to pixels
+ref_pixels = amap.wcs.world_to_pixel(ref_point)  
+ref_pixels  
+```
+
+```{python}
+# Put the center on the map
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = plt.subplot(projection=amap)  
+amap.plot()  
+ax.plot_coord(ref_point, 'o')  
+
+plt.show()
+```
+
+## Check the image
+
+```{python}
+# I want to upload the last image I have chronologically and compare it to the image above. 
+# If I did this correct, the dot should move slightly to the right.
+
+# Load in the filepath
+ref_image_last = sunpy.map.Map("/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t22_29_55_84z_image_lev1.fits")
+
+# Establish a reference point - converting the 108 latitude to 18, using the same obstime as above
+ref_point_last = SkyCoord(lon = 61*u.deg, lat = (108-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T22:29:55")
+
+# Plot the image
+amap_last = sunpy.map.Map(ref_image_last)  
+amap_last.coordinate_frame 
+
+
+fig_last = plt.figure()
+ax_last = plt.subplot(projection=amap_last)  
+amap_last.plot()  
+ax_last.plot_coord(ref_point_last, 'o')  
+
+plt.show()
+
+# Difference is pretty subtle
+```
+
+```{python}
+# Repeat with a time point 2 days in the future.
+
+# I want to upload the last image I have chronologically and compare it to the image above. 
+# If I did this correct, the dot should move slightly to the right.
+
+# Load in the filepath
+ref_image_last = sunpy.map.Map("/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t22_29_55_84z_image_lev1.fits")
+
+# Establish a reference point - converting the 108 latitude to 18, using the same obstime as above
+ref_point_last = SkyCoord(lon = 61*u.deg, lat = (108-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/05/02T22:29:55")
+
+# Plot the image
+amap_last = sunpy.map.Map(ref_image_last)  
+amap_last.coordinate_frame 
+
+
+fig_last = plt.figure()
+ax_last = plt.subplot(projection=amap_last)  
+amap_last.plot()  
+ax_last.plot_coord(ref_point_last, 'o')  
+
+plt.show()
+
+# Difference is now much more clear. This seems to make sense.
+```
+
+## Does increasing the co-latitude shift the image down?
+
+```{python}
+# I want to upload the last image I have chronologically and compare it to the image above. 
+# I want to increase the latitude. I think this will shift the dow town
+
+# Load in the filepath
+ref_image_last = sunpy.map.Map("/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t22_29_55_84z_image_lev1.fits")
+
+# Establish a reference point - converting the 108 latitude to 18, using the same obstime as above
+ref_point_last = SkyCoord(lon = 61*u.deg, lat = -(108-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T22:29:55")
+
+# Plot the image
+amap_last = sunpy.map.Map(ref_image_last)  
+amap_last.coordinate_frame 
+
+
+fig_last = plt.figure()
+ax_last = plt.subplot(projection=amap_last)  
+amap_last.plot()  
+ax_last.plot_coord(ref_point_last, 'o')  
+
+plt.show()
+
+# Why is there a disconnect? I decrease the latitude and it goes down,
+# but the opposite is true in an image
+```
+
+## Create a visualization
+
+```{python}
+# Import necessary libraries
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from sunpy.map import Map
+
+import matplotlib.colors as colors
+import matplotlib.pyplot as plt
+
+from astropy.visualization import ImageNormalize, SqrtStretch
+
+import sunpy.data.sample
+import sunpy.map
+```
+
+```{python}
+
+# Let's see if we can add a string of the images together in a visualization
+m_seq = sunpy.map.Map("/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/*.fits", sequence=True)
+
+
+fig = plt.figure()
+ax = fig.add_subplot(projection=m_seq.maps[0])
+ani = m_seq.plot(axes=ax, norm=ImageNormalize(vmin=0, vmax=5e3, stretch=SqrtStretch()))
+
+plt.show()
+
+# ani = sequence.peek(colorbar=True)   
+# plt.show()
+```
+
+```{python}
+# There's some issue with the maps
+```
+
+## Put a box around the location - SKIPPED
+
+```{python}
+# Put the center on the map
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = plt.subplot(projection=amap)  
+amap.plot()  
+ax.plot_coord(ref_point, 'o')  
+
+plt.show()
+
+# Will skip for now - cropping is the key
+```
+
+## Crop the location
+
+```{python}
+import matplotlib.pyplot as plt
+
+import astropy.units as u
+from astropy.coordinates import SkyCoord
+
+import sunpy.data.sample
+import sunpy.map
+```
+
+```{python}
+# Sample code.
+swap_map = sunpy.map.Map(sunpy.data.sample.SWAP_LEVEL1_IMAGE)
+
+top_right = SkyCoord(0 * u.arcsec, -200 * u.arcsec, frame=swap_map.coordinate_frame)
+bottom_left = SkyCoord(-900 * u.arcsec, -900 * u.arcsec, frame=swap_map.coordinate_frame)
+swap_submap = swap_map.submap(bottom_left, top_right=top_right)
+
+fig = plt.figure()
+ax = fig.add_subplot(projection=swap_submap)
+image = swap_submap.plot(axes=ax)
+swap_submap.draw_limb(axes=ax)
+swap_submap.draw_grid(axes=ax)
+
+# Make some room and put the title at the top of the figure
+ax.set_position([0.1, 0.1, 0.8, 0.7])
+ax.set_title(ax.get_title(), pad=45)
+
+plt.show()
+```
+
+```{python}
+# Sample code, revamped
+swap_map = sunpy.map.Map("/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t21_45_43_84z_image_lev1.fits")
+
+# This is what we have, but we need something in Carrington standards, right?
+# Otherwise we're playing guess-and-check
+# top_right = SkyCoord(0 * u.arcsec, -200 * u.arcsec, frame=swap_map.coordinate_frame)
+# top_right = SkyCoord(lon = 66*u.deg, lat = (113-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T21:45:49")
+top_right = SkyCoord(lon = 81*u.deg, lat = (128-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T21:45:49")
+
+# Expand this!
+
+# SkyCoord(lon = 61*u.deg, lat = (108-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T21:45:49")
+# bottom_left = SkyCoord(-900 * u.arcsec, -900 * u.arcsec, frame=swap_map.coordinate_frame)
+# bottom_left = SkyCoord(lon = 56*u.deg, lat = (103-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T21:45:49")
+bottom_left = SkyCoord(lon = 41*u.deg, lat = (88-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T21:45:49")
+
+swap_submap = swap_map.submap(bottom_left, top_right=top_right)
+
+# Extract the array
+da = swap_submap.data # This extracts the array
+da.shape # This gives us dimensions
+
+
+fig = plt.figure()
+ax = fig.add_subplot(projection=swap_submap)
+image = swap_submap.plot(axes=ax)
+swap_submap.draw_limb(axes=ax)
+swap_submap.draw_grid(axes=ax)
+
+# Make some room and put the title at the top of the figure
+ax.set_position([0.1, 0.1, 0.8, 0.7])
+ax.set_title(ax.get_title(), pad=45)
+
+plt.show()
+```
+
+## One more check of the data on 05.07.2024
+
+```{python}
+# The link below documents a flare at 21:58:31.840 UTC (see the reference image)
+# It uses the AIA 193 wavelength
+
+# Load in the filepath
+ref_image = sunpy.map.Map("/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/aia_lev1_193a_2011_04_30t21_45_43_84z_image_lev1.fits")
+
+
+# Establish a reference point. The SOL is SOL2011-04-30T21:54:00L169C114,
+# which means lon should be 169, and lat should be -24
+# The obs time should be 2011/04/30T21:54:00
+# NOTE that this is different from the image time. We are going to use the center
+# from the SOL for all our images
+
+ref_point_new = SkyCoord(lon = 169*u.deg, lat = -(114-90)*u.deg, frame="heliographic_carrington", observer="earth", obstime="2011/04/30T21:54:00")
+
+# Plot the image
+amap_new = sunpy.map.Map(ref_image_new)  
+amap_new.coordinate_frame 
+
+
+fig_new = plt.figure()
+ax_new = plt.subplot(projection=amap_new)  
+amap_new.plot()  
+ax_new.plot_coord(ref_point_new, 'o')  
+
+plt.show()
+
+# This plot aligns with the one below
+# https://sdowww.lmsal.com/sdomedia/ssw/media/ssw/ssw_client/data/ssw_service_110430_152133_10998/www/ssw_cutout_20110430_214908_aia_193_S24W55_20110430_214907_context_0800.gif
+```
+
+# 3. Export Data
+
+```{python}
+# (data_2011_full <- py_to_r(da_test_small))
+ # (y <- py_to_r(x))
+```
+
+```{r}
+# (data_2011_full <- py_to_r(da_test_small))
+```
+
+```{python}
+# Pseudocode
+# S1: Supply a list of all files
+# S2: Extract the data frame from each
+# S3: Concatenate them
+# S4: Export
+```
+
+```{python}
+# Try it again
+# import OS module
+# Get the list of all files and directories
+path = "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/"
+dir_list = sorted(os.listdir(path))
+
+# Remove the item
+dir_list.remove(".DS_Store")
+# print("Files ˛and directories in '", path, "' :")
+# prints all files
+# print(dir_list)
+
+# Check the list
+# sum(dir_list == "*.fits" for p in dir_list)
+# dir_list.remove()
+
+# dir_list
+# dir_list.endswith(".fits")
+len(dir_list)
+
+# Sort the list
+# dir_list.sort()
+```
+
+```{python}
+# Thoughts on 5/7 - need to cut down the size before I go too wild with this
+# Currently our data has 591 rows and 727 columns
+# We want to get it near 232 to 292. A touch bigger is Ok
+# Our lat_add refers to rows. To adjust it, we can do (232/591)*10, 
+# which rounds up to 4
+# Our long_add refers to columns. To adjust it, we can do (292/727)*20
+# which, rounds down to 8
+da_test_small = pull_all_data(image_location =  "/Users/stevenmoen/Fetch_20110430_AIA_193_Pull/", ref_c_lon = 61, ref_c_lat = 108, lon_add = 8, lat_add = 4, ref_time = "2011/04/30T21:45:49", rows_per_image = 239, cols_per_image = 302)
+
+# ref_c_lon = 61, ref_c_lat = 108, lon_add = 20, lat_add = 10, ref_time = "2011/04/30T21:45:49"
+```
+
+```{python}
+import numpy as np
+sto = np.zeros((239*300,302))
+sto.shape
+```
+
+```{python}
+# Try running an np.full call
+np.full((239*300,302), -999.)
+```
