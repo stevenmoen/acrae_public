@@ -27,6 +27,54 @@ The simulation folder contains codes related to simulated in the paper.
 
 ## Section 2
 
-**| Output | Files | Procedure | Notes |**
+| Output | Files | Procedure | Notes |
 | --- | --- | --- | --- |
-| R1C1 | R1C2 | R1C3 | R1C4 |
+| Figure 1 |  |  |  |
+| Figure 2 |  |  |  |
+| Table 1 |  |  |  |
+| Table 2 |  |  |  |
+| Table 3 |  |  |  |
+| Table 4 |  |  |  |
+| <br> | <br> | <br> | <br> |
+| Figure S1 |  |  |  |
+| Figure S2 |  |  |  |
+| Figure S3 |  |  |  |
+| Table S1 |  |  |  |
+| Figure S4 |  |  |  |
+| Figure S5 |  |  |  |
+| Table S2 |  |  |  |
+| Table S3 |  |  |  |
+| Figures S6-S18 |  |  |  |
+| Figure S19 |  |  |  |
+| Figure S20 |  |  |  |
+| Table S4 |  |  |  |
+| Figure S21 |  |  |  |
+| Figure S22 |  |  |  |
+| Figure S23 |  |  |  |
+| Figure S24 |  |  |  |
+| Table S5 |  |  |  |
+| Table S6 |  |  |  |
+| Table S7 |  |  |  |
+| Table S8 |  |  |  |
+| Table S9 |  |  |  |
+| Table S10 |  |  |  |
+| Table S11 |  |  |  |
+| Table S12 |  |  |  |
+| Table S13 |  |  |  |
+| Figure S25 |  |  |  |
+| Figure S26 |  |  |  |
+| Figure S27 |  |  |  |
+| Figure S28 |  |  |  |
+| Figure S29 |  |  |  |
+| Figure S30 |  |  |  |
+| Figure S31 |  |  |  |
+| Figure S32 |  |  |  |
+| Figure S33 |  |  |  |
+| Figure S34 |  |  |  |
+| Figure S35 |  |  |  |
+| Figure S36 |  |  |  |
+| Figure S37 |  |  |  |
+| Table S14 |  |  |  |
+| Figure S38 |  |  |  |
+| Figure S39 |  |  |  |
+
