@@ -24,3 +24,9 @@ The parameters folder contains estimation details for the estimated parameters s
 The prediction folder contains codes related to forecasting in the paper.
 
 The simulation folder contains codes related to simulated in the paper.
+
+## Section 2
+
+**| Output | Files | Procedure | Notes |**
+| --- | --- | --- | --- |
+| R1C1 | R1C2 | R1C3 | R1C4 |
