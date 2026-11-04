@@ -19,9 +19,10 @@ library(VGAM)
 # library(webshot2)
 # library(tidyquant)
 library(latex2exp)
+library(gridExtra)
 
 # The parameters should be saved in these subfolders
-# folder_file_2011_original_fs_parameter = "Original_Parameters_from_Supplement/Original_Parameters_from_Supplement.csv"
+folder_file_2011_original_fs_parameter = "Original_Parameters_from_Supplement/Original_Parameters_from_Supplement.csv"
 # folder_file_2011_old_parameter = "Run\ from\ 7.28.2022/parameter3_clean_debug_flag_0_2024-02-19.csv"
 # folder_file_2011_old_parameter_r2 = "Solar_Flare_2011_new_data/parameter3_clean_debug_flag_0_2024-06-10.csv"
 folder_file_2011_new_parameter = "Solar_Flare_2011_new_data/parameter3_clean_debug_flag_0_2024-08-30.csv"
@@ -35,10 +36,10 @@ folder_file_2023_parameter_pp = "Solar_Flare_2023_cut/parameter3_clean_debug_fla
 # folder_file_2023_parameter_pf = "Solar_Flare_2023_pre_flare/parameter3_clean_debug_flag_0_2025-04-29.csv"
 # 
 # # Read in the parameters
-# parameters_2011_original_fs <- read.csv(file = paste0(base_path_parameter, folder_file_2011_original_fs_parameter), header = TRUE)
+parameters_2011_original_fs <- read.csv(file = paste0(your_path_to_parameters, folder_file_2011_original_fs_parameter), header = TRUE)
 # # Flip the sign
-# parameters_2011_original_fs$beta_2 <- parameters_2011_original_fs$beta_2*(-1)
-# parameters_2011_original_fs$beta_4 <- parameters_2011_original_fs$beta_4*(-1)
+parameters_2011_original_fs$beta_2 <- parameters_2011_original_fs$beta_2*(-1)
+parameters_2011_original_fs$beta_4 <- parameters_2011_original_fs$beta_4*(-1)
 # 
 # parameters_2011_old <- read.csv(file = paste0(base_path_parameter, folder_file_2011_old_parameter), header = TRUE)
 # parameters_2011_old_r2 <- read.csv(file = paste0(base_path_parameter, folder_file_2011_old_parameter_r2), header = TRUE)
@@ -55,7 +56,7 @@ parameters_2023_pp <- read.csv(file = paste0(your_path_to_parameters, folder_fil
 # base_path_data = "~/Documents/GitHub/solar_flare_project/"
 
 # The data should be saved in these subfolders
-# folder_file_2011_old_data = "data.txt"
+folder_file_2011_old_data = "data.txt"
 folder_file_2011_new_data = "Processed_Data/2011_Data_Para_Input_Files_New/max_df_2011_new_2024-06-10.rds"
 folder_file_2017_data = "Processed_Data/2017_Data_Para_Input_Files_New/max_df_2017_new_2026-02-16.rds"
 folder_file_2022_data = "Processed_Data/2022_Data_Para_Input_Files_New/max_df_2022_new_2024-08-29.rds"
@@ -64,8 +65,8 @@ folder_file_2017_data_test = "Processed_Data/post_peak_testing_data/max_df_2017_
 folder_file_2022_data_test = "Processed_Data/post_peak_testing_data/max_df_2022_testing.rds"
 folder_file_2023_data_test = "Processed_Data/post_peak_testing_data/max_df_2023_testing.rds"
 
-# data_2011_old <- read.table(file = paste0(base_path_data, folder_file_2011_old_data), header = FALSE)
 # Whole period data
+data_2011_old <- read.table(file = paste0(your_path_to_data, folder_file_2011_old_data), header = FALSE)
 data_2011_new <- readRDS(file = paste0(your_path_to_data, folder_file_2011_new_data))
 data_2017 <- readRDS(file = paste0(your_path_to_data, folder_file_2017_data))
 data_2022 <- readRDS(file = paste0(your_path_to_data, folder_file_2022_data))
@@ -101,10 +102,107 @@ source(paste0(your_path_to_prediction, "prediction_core.R"))
 
 # 2011 whole period data
 ## 2011 new parameters
+# data_2011_old_forecast_w_parameters_2011_old_90 <- prediction_with_max(input_data_df = data_2011_old, input_param_df = parameters_2011_original_fs, alpha = 0.1)
+data_2011_old_forecast_w_parameters_2011_old_95 <- prediction_with_max(input_data_df = data_2011_old, input_param_df = parameters_2011_original_fs, alpha = 0.05)
+# data_2011_old_forecast_w_parameters_2011_old_99 <- prediction_with_max(input_data_df = data_2011_old, input_param_df = parameters_2011_original_fs, alpha = 0.01)
+
+##### FIGURE S21 #####
+r1c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(1)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r2c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(34)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r3c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(45)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r1c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(1)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r2c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(34)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r3c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(45)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+grid.arrange(r1c1, r1c2, r2c1, r2c2, r3c1, r3c2, nrow = 3, ncol = 2)
+
+##### FIGURE S22 #####
+r1c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(12)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r2c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(33)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r3c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(44)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r1c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(12)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r2c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(33)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+r3c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1, `Location ID` %in% c(44)) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+grid.arrange(r1c1, r1c2, r2c1, r2c2, r3c1, r3c2, nrow = 3, ncol = 2)
+
+##### FIGURE S23 #####
+data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+##### FIGURE S24 #####
+data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
+  filter(`Time ID` > 1) |> # Cut off the first time point since it starts at 1
+  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  geom_line() + 
+  facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
+
+# 2011 whole period data
+## 2011 new parameters
 data_2011_new_forecast_w_parameters_2011_new_90 <- prediction_with_max(input_data_df = data_2011_new, input_param_df = parameters_2011_new, alpha = 0.1)
 data_2011_new_forecast_w_parameters_2011_new_95 <- prediction_with_max(input_data_df = data_2011_new, input_param_df = parameters_2011_new, alpha = 0.05)
 data_2011_new_forecast_w_parameters_2011_new_99 <- prediction_with_max(input_data_df = data_2011_new, input_param_df = parameters_2011_new, alpha = 0.01)
-
 
 # 2017 whole period data
 ## 2011 new parameters
