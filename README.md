@@ -9,7 +9,7 @@ The second is a table with information about how to reproduce the tables and fig
 ## Section 1
 
 The data file contains processed data used to create the figures and tables in the paper. 
-The raw data, which is too large for GitHub, is stored at this location:
+The raw data and the cleaned flare data, which is too large for GitHub, is stored at this location:
 
 [Insert Zenodo link]
 
