@@ -17,7 +17,7 @@ The data_cleaning folder contains code used to clean different types of data, fr
 
 The descriptive_statistics folder contains visualizations of data without any modeling.
 
-The estimation folder contains code needed to estimate the parameters for all areas. There is also a Run Kickoff Checklist. Using it is highly recommended.
+The estimation folder contains code needed to estimate the parameters for all areas. There is also a Run Kickoff Checklist. Using it is highly recommended, as you may be required to update file paths.
 
 The parameters folder contains estimation details for the estimated parameters seen in Supplementary Material.
 
