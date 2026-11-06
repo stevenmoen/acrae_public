@@ -11,7 +11,7 @@ The second is a table with information about how to reproduce the tables and fig
 The data file contains processed data used to create the figures and tables in the paper. 
 The raw data and the cleaned flare data, too large for GitHub, are stored at this location:
 
-DOI: 10.5281/zenodo.23991152
+DOI: [10.5281/zenodo.23991152](url)
 
 The data_cleaning folder contains code used to clean different types of data, from raw to clean to processed.
 
