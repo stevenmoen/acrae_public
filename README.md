@@ -53,7 +53,7 @@ The simulation folder contains code related to simulations in the paper.
 | Figure S23 |  |  |  |
 | Figure S24 |  |  |  |
 | Table S5 |  |  |  |
-| Table S6 |  |  |  |
+| Table S6 |  |  | Note that beta_2 and beta_4 are negative in the .csv but positive in the paper. This is not an error. The code assumes they are already negative, though equation 13 makes them negative. This is true for all parameters in the Supplemental Material. |
 | Table S7 |  |  |  |
 | Table S8 |  |  |  |
 | Table S9 |  |  |  |
