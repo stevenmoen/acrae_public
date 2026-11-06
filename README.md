@@ -52,14 +52,14 @@ The simulation folder contains code related to simulations in the paper.
 | Figure S23 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S24 | prediction/prediction_outputs.R | Run the code |  |
 | Table S5 |  |  |  |
-| Table S6 |  |  | Note that beta_2 and beta_4 are negative in the .csv but positive in the paper. This is not an error. The code assumes they are already negative, though equation 13 makes them negative. This is true for all parameters in the Supplemental Material. |
-| Table S7 |  |  |  |
-| Table S8 |  |  |  |
-| Table S9 |  |  |  |
+| Table S6 | estimation/paraFind_main - 2011.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist | Note that beta_2 and beta_4 are negative in the .csv but positive in the paper. This is not an error. The code assumes they are already negative, though equation 13 makes them negative. This is true for all parameters in the Supplemental Material. |
+| Table S7 | estimation/paraFind_main - 2017.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
+| Table S8 | estimation/paraFind_main - 2022.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
+| Table S9 | estimation/paraFind_main - 2023.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
 | Table S10 | prediction/prediction_outputs.R | Run the code |  |
-| Table S11 |  |  | For stability, these parameters use a burn-in period of only 10 instead of the usual 100 |
-| Table S12 |  |  |  |
-| Table S13 |  |  |  |
+| Table S11 | estimation/paraFind_main - 2017 - Trimmed Data Short Burn-In.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist | For stability, these parameters use a burn-in period of only 10 instead of the usual 100 |
+| Table S12 | estimation/paraFind_main - 2022 - Trimmed Data.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
+| Table S13 | estimation/paraFind_main - 2023 - Trimmed Data.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
 | Figures S25-S36 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S26 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S27 | prediction/prediction_outputs.R | Run the code |  |
