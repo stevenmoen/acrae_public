@@ -9,21 +9,21 @@ The second is a table with information about how to reproduce the tables and fig
 ## Section 1
 
 The data file contains processed data used to create the figures and tables in the paper. 
-The raw data and the cleaned flare data, which is too large for GitHub, is stored at this location:
+The raw data and the cleaned flare data, too large for GitHub, are stored at this location:
 
 DOI: 10.5281/zenodo.23991152
 
-The data_cleaning folder contains codes used to clean different types of data, from raw to processed.
+The data_cleaning folder contains code used to clean different types of data, from raw to clean to processed.
 
 The descriptive_statistics folder contains visualizations of data without any modeling.
 
-The estimation folder contains code needed to estimate the parameters for all areas. There is also a Run Kickoff Checklist.
+The estimation folder contains code needed to estimate the parameters for all areas. There is also a Run Kickoff Checklist. Using it is highly recommended.
 
 The parameters folder contains estimation details for the estimated parameters seen in Supplementary Material.
 
-The prediction folder contains codes related to forecasting in the paper.
+The prediction folder contains code related to forecasting in the paper.
 
-The simulation folder contains codes related to simulated in the paper.
+The simulation folder contains code related to simulations in the paper.
 
 ## Section 2
 
