@@ -1,3 +1,5 @@
+# This file reproduces Figure 1 in the main manuscript.
+
 # It is recommended to clear your environment before running this code. Uncomment and run the line below.
 # rm(list = ls())
 

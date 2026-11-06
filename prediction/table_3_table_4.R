@@ -13,7 +13,9 @@ your_path_to_2022_data = "~/Cleaned_Flare_Data/2022/"
 your_path_to_2023_data = "~/Cleaned_Flare_Data/2023/"
 
 # Load in libraries
+library(tidyverse)
 library(VGAM)
+library(latex2exp)
 
 # The parameters should be saved in these subfolders
 folder_file_2011_new_parameter = "Solar_Flare_2011_new_data/parameter3_clean_debug_flag_0_2024-08-30.csv"

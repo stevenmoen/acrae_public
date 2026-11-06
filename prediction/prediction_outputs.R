@@ -1,4 +1,4 @@
-# This code reproduces Figure 2, Figure S38, and Figure S39
+# This code reproduces many figures and tables in the paper relating to prediction
 
 # It is recommended to clear your environment before running this code. Uncomment and run the line below.
 # rm(list = ls())
@@ -106,95 +106,95 @@ source(paste0(your_path_to_prediction, "prediction_core.R"))
 data_2011_old_forecast_w_parameters_2011_old_95 <- prediction_with_max(input_data_df = data_2011_old, input_param_df = parameters_2011_original_fs, alpha = 0.05)
 # data_2011_old_forecast_w_parameters_2011_old_99 <- prediction_with_max(input_data_df = data_2011_old, input_param_df = parameters_2011_original_fs, alpha = 0.01)
 
-##### FIGURE S21 #####
+##### Figure S21 #####
 r1c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(1)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logAlpha_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r2c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(34)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logAlpha_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r3c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(45)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logAlpha_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r1c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(1)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logSigma_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r2c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(34)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logSigma_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r3c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(45)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logSigma_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 grid.arrange(r1c1, r1c2, r2c1, r2c2, r3c1, r3c2, nrow = 3, ncol = 2)
 
-##### FIGURE S22 #####
+##### Figure S22 #####
 r1c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(12)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logAlpha_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r2c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(33)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logAlpha_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r3c1 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(44)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logAlpha_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r1c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(12)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logSigma_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r2c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(33)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logSigma_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 r3c2 = data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1, `Location ID` %in% c(44)) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logSigma_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
 grid.arrange(r1c1, r1c2, r2c1, r2c2, r3c1, r3c2, nrow = 3, ncol = 2)
 
-##### FIGURE S23 #####
+##### Figure S23 #####
 data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logAlpha_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logAlpha_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
-##### FIGURE S24 #####
+##### Figure S24 #####
 data_2011_old_forecast_w_parameters_2011_old_95$predicted_data_df |> 
   filter(`Time ID` > 1) |> # Cut off the first time point since it starts at 1
-  ggplot(aes(x = `Time ID`, y = logSigma_pred)) +
+  ggplot(aes(x = `Time ID`, y = exp(logSigma_pred))) +
   geom_line() + 
   facet_wrap(vars(`Location ID`), nrow = 12, ncol = 10)
 
@@ -338,7 +338,6 @@ create_coverage_table(data_2023_forecast_w_parameters_2011_new_95, year_data = 2
 
 ##### Figure S36 ######
 create_coverage_table(data_2023_forecast_w_parameters_2011_new_99, year_data = 2023, year_parameters = 2011, alpha = 0.01)
-
 
 # 2017 using 2011 new parameters
 data_2017_forecast_w_parameters_2011_new_95 <- prediction_with_max(input_data_df = data_2017, input_param_df = parameters_2011_new, alpha = 0.05)

@@ -1,0 +1,1818 @@
+[[1]]
+[1] "Start of the max computation: 2024-08-31 00:01:53.067109"
+
+[[2]]
+[1] "Start of the first optimization : 2024-08-31 00:01:53.238328"
+
+[[3]]
+[1] "Column 1 in the first optimization routine started running at 2024-08-31 00:01:53.272269"
+
+[[4]]
+[1] "Column 1 got past the first result in the first optimization routine at 2024-08-31 00:02:17.408612"
+
+[[5]]
+[1] "Column 1 got past the second result in the first optimization routine at 2024-08-31 00:02:17.411568"
+
+[[6]]
+[1] "Column 1 got past the third result in the first optimization routine at 2024-08-31 00:02:38.354517"
+
+[[7]]
+[1] "Column 2 in the first optimization routine started running at 2024-08-31 00:02:38.35499"
+
+[[8]]
+[1] "Column 2 got past the first result in the first optimization routine at 2024-08-31 00:03:05.556672"
+
+[[9]]
+[1] "Column 2 got past the second result in the first optimization routine at 2024-08-31 00:03:05.557072"
+
+[[10]]
+[1] "Column 2 got past the third result in the first optimization routine at 2024-08-31 00:03:23.400653"
+
+[[11]]
+[1] "Column 3 in the first optimization routine started running at 2024-08-31 00:03:23.401518"
+
+[[12]]
+[1] "Column 3 got past the first result in the first optimization routine at 2024-08-31 00:04:42.900127"
+
+[[13]]
+[1] "Column 3 got past the second result in the first optimization routine at 2024-08-31 00:04:42.900569"
+
+[[14]]
+[1] "Column 3 got past the third result in the first optimization routine at 2024-08-31 00:04:59.232674"
+
+[[15]]
+[1] "Column 4 in the first optimization routine started running at 2024-08-31 00:04:59.233769"
+
+[[16]]
+[1] "Column 4 got past the first result in the first optimization routine at 2024-08-31 00:05:37.438521"
+
+[[17]]
+[1] "Column 4 got past the second result in the first optimization routine at 2024-08-31 00:05:37.439104"
+
+[[18]]
+[1] "Column 4 got past the third result in the first optimization routine at 2024-08-31 00:05:51.821389"
+
+[[19]]
+[1] "Column 5 in the first optimization routine started running at 2024-08-31 00:05:51.822252"
+
+[[20]]
+[1] "Column 5 got past the first result in the first optimization routine at 2024-08-31 00:06:12.237985"
+
+[[21]]
+[1] "Column 5 got past the second result in the first optimization routine at 2024-08-31 00:06:12.239062"
+
+[[22]]
+[1] "Column 5 got past the third result in the first optimization routine at 2024-08-31 00:07:41.190977"
+
+[[23]]
+[1] "Column 6 in the first optimization routine started running at 2024-08-31 00:07:41.19167"
+
+[[24]]
+[1] "Column 6 got past the first result in the first optimization routine at 2024-08-31 00:08:27.287696"
+
+[[25]]
+[1] "Column 6 got past the second result in the first optimization routine at 2024-08-31 00:08:27.288243"
+
+[[26]]
+[1] "Column 6 got past the third result in the first optimization routine at 2024-08-31 00:08:53.69911"
+
+[[27]]
+[1] "Column 7 in the first optimization routine started running at 2024-08-31 00:08:53.699572"
+
+[[28]]
+[1] "Column 7 got past the first result in the first optimization routine at 2024-08-31 00:09:30.052233"
+
+[[29]]
+[1] "Column 7 got past the second result in the first optimization routine at 2024-08-31 00:09:30.052676"
+
+[[30]]
+[1] "Column 7 got past the third result in the first optimization routine at 2024-08-31 00:09:46.811599"
+
+[[31]]
+[1] "Column 8 in the first optimization routine started running at 2024-08-31 00:09:46.812295"
+
+[[32]]
+[1] "Column 8 got past the first result in the first optimization routine at 2024-08-31 00:10:14.078831"
+
+[[33]]
+[1] "Column 8 got past the second result in the first optimization routine at 2024-08-31 00:10:14.079595"
+
+[[34]]
+[1] "Column 8 got past the third result in the first optimization routine at 2024-08-31 00:10:30.648588"
+
+[[35]]
+[1] "Column 9 in the first optimization routine started running at 2024-08-31 00:10:30.649147"
+
+[[36]]
+[1] "Column 9 got past the first result in the first optimization routine at 2024-08-31 00:14:17.088095"
+
+[[37]]
+[1] "Column 9 got past the second result in the first optimization routine at 2024-08-31 00:14:17.088738"
+
+[[38]]
+[1] "Column 9 got past the third result in the first optimization routine at 2024-08-31 00:14:37.917304"
+
+[[39]]
+[1] "Column 10 in the first optimization routine started running at 2024-08-31 00:14:37.918273"
+
+[[40]]
+[1] "Column 10 got past the first result in the first optimization routine at 2024-08-31 00:15:51.301843"
+
+[[41]]
+[1] "Column 10 got past the second result in the first optimization routine at 2024-08-31 00:15:51.302531"
+
+[[42]]
+[1] "Column 10 got past the third result in the first optimization routine at 2024-08-31 00:15:51.30274"
+
+[[43]]
+[1] "Column 11 in the first optimization routine started running at 2024-08-31 00:15:51.302969"
+
+[[44]]
+[1] "Column 11 got past the first result in the first optimization routine at 2024-08-31 00:36:46.79416"
+
+[[45]]
+[1] "Column 11 got past the second result in the first optimization routine at 2024-08-31 00:36:46.794866"
+
+[[46]]
+[1] "Column 11 got past the third result in the first optimization routine at 2024-08-31 00:36:46.795066"
+
+[[47]]
+[1] "Column 12 in the first optimization routine started running at 2024-08-31 00:36:46.795546"
+
+[[48]]
+[1] "Column 12 got past the first result in the first optimization routine at 2024-08-31 00:37:26.923321"
+
+[[49]]
+[1] "Column 12 got past the second result in the first optimization routine at 2024-08-31 00:37:26.924024"
+
+[[50]]
+[1] "Column 12 got past the third result in the first optimization routine at 2024-08-31 00:37:26.92447"
+
+[[51]]
+[1] "Column 13 in the first optimization routine started running at 2024-08-31 00:37:26.924685"
+
+[[52]]
+[1] "Column 13 got past the first result in the first optimization routine at 2024-08-31 00:38:16.158937"
+
+[[53]]
+[1] "Column 13 got past the second result in the first optimization routine at 2024-08-31 00:38:16.160159"
+
+[[54]]
+[1] "Column 13 got past the third result in the first optimization routine at 2024-08-31 00:38:31.545364"
+
+[[55]]
+[1] "Column 14 in the first optimization routine started running at 2024-08-31 00:38:31.545977"
+
+[[56]]
+[1] "Column 14 got past the first result in the first optimization routine at 2024-08-31 00:39:07.160817"
+
+[[57]]
+[1] "Column 14 got past the second result in the first optimization routine at 2024-08-31 00:39:07.161391"
+
+[[58]]
+[1] "Column 14 got past the third result in the first optimization routine at 2024-08-31 00:39:26.255819"
+
+[[59]]
+[1] "Column 15 in the first optimization routine started running at 2024-08-31 00:39:26.256853"
+
+[[60]]
+[1] "Column 15 got past the first result in the first optimization routine at 2024-08-31 00:39:51.039929"
+
+[[61]]
+[1] "Column 15 got past the second result in the first optimization routine at 2024-08-31 00:39:51.040338"
+
+[[62]]
+[1] "Column 15 got past the third result in the first optimization routine at 2024-08-31 00:40:08.1337"
+
+[[63]]
+[1] "Column 16 in the first optimization routine started running at 2024-08-31 00:40:08.134383"
+
+[[64]]
+[1] "Column 16 got past the first result in the first optimization routine at 2024-08-31 00:40:41.774716"
+
+[[65]]
+[1] "Column 16 got past the second result in the first optimization routine at 2024-08-31 00:40:41.775183"
+
+[[66]]
+[1] "Column 16 got past the third result in the first optimization routine at 2024-08-31 00:40:58.018836"
+
+[[67]]
+[1] "Column 17 in the first optimization routine started running at 2024-08-31 00:40:58.019292"
+
+[[68]]
+[1] "Column 17 got past the first result in the first optimization routine at 2024-08-31 00:41:27.769638"
+
+[[69]]
+[1] "Column 17 got past the second result in the first optimization routine at 2024-08-31 00:41:27.770064"
+
+[[70]]
+[1] "Column 17 got past the third result in the first optimization routine at 2024-08-31 00:41:27.770864"
+
+[[71]]
+[1] "Column 18 in the first optimization routine started running at 2024-08-31 00:41:27.771017"
+
+[[72]]
+[1] "Column 18 got past the first result in the first optimization routine at 2024-08-31 00:47:37.49308"
+
+[[73]]
+[1] "Column 18 got past the second result in the first optimization routine at 2024-08-31 00:47:37.49358"
+
+[[74]]
+[1] "Column 18 got past the third result in the first optimization routine at 2024-08-31 00:51:15.557098"
+
+[[75]]
+[1] "Column 19 in the first optimization routine started running at 2024-08-31 00:51:15.557513"
+
+[[76]]
+[1] "Column 19 got past the first result in the first optimization routine at 2024-08-31 00:51:36.278517"
+
+[[77]]
+[1] "Column 19 got past the second result in the first optimization routine at 2024-08-31 00:51:36.279169"
+
+[[78]]
+[1] "Column 19 got past the third result in the first optimization routine at 2024-08-31 00:51:36.279863"
+
+[[79]]
+[1] "Column 20 in the first optimization routine started running at 2024-08-31 00:51:36.280054"
+
+[[80]]
+[1] "Column 20 got past the first result in the first optimization routine at 2024-08-31 00:52:02.673022"
+
+[[81]]
+[1] "Column 20 got past the second result in the first optimization routine at 2024-08-31 00:52:02.673669"
+
+[[82]]
+[1] "Column 20 got past the third result in the first optimization routine at 2024-08-31 00:52:26.31135"
+
+[[83]]
+[1] "Column 21 in the first optimization routine started running at 2024-08-31 00:52:26.312061"
+
+[[84]]
+[1] "Column 21 got past the first result in the first optimization routine at 2024-08-31 00:53:09.036555"
+
+[[85]]
+[1] "Column 21 got past the second result in the first optimization routine at 2024-08-31 00:53:09.037113"
+
+[[86]]
+[1] "Column 21 got past the third result in the first optimization routine at 2024-08-31 00:53:28.147633"
+
+[[87]]
+[1] "Column 22 in the first optimization routine started running at 2024-08-31 00:53:28.148734"
+
+[[88]]
+[1] "Column 22 got past the first result in the first optimization routine at 2024-08-31 01:08:54.565032"
+
+[[89]]
+[1] "Column 22 got past the second result in the first optimization routine at 2024-08-31 01:08:54.565932"
+
+[[90]]
+[1] "Column 22 got past the third result in the first optimization routine at 2024-08-31 01:09:10.400355"
+
+[[91]]
+[1] "Column 23 in the first optimization routine started running at 2024-08-31 01:09:10.401164"
+
+[[92]]
+[1] "Column 23 got past the first result in the first optimization routine at 2024-08-31 01:25:35.069772"
+
+[[93]]
+[1] "Column 23 got past the second result in the first optimization routine at 2024-08-31 01:25:35.070429"
+
+[[94]]
+[1] "Column 23 got past the third result in the first optimization routine at 2024-08-31 01:26:00.680492"
+
+[[95]]
+[1] "Column 24 in the first optimization routine started running at 2024-08-31 01:26:00.681522"
+
+[[96]]
+[1] "Column 24 got past the first result in the first optimization routine at 2024-08-31 01:26:51.291598"
+
+[[97]]
+[1] "Column 24 got past the second result in the first optimization routine at 2024-08-31 01:26:51.292961"
+
+[[98]]
+[1] "Column 24 got past the third result in the first optimization routine at 2024-08-31 01:27:07.329087"
+
+[[99]]
+[1] "Column 25 in the first optimization routine started running at 2024-08-31 01:27:07.329903"
+
+[[100]]
+[1] "Column 25 got past the first result in the first optimization routine at 2024-08-31 01:27:25.94463"
+
+[[101]]
+[1] "Column 25 got past the second result in the first optimization routine at 2024-08-31 01:27:25.945412"
+
+[[102]]
+[1] "Column 25 got past the third result in the first optimization routine at 2024-08-31 01:27:25.94613"
+
+[[103]]
+[1] "Column 26 in the first optimization routine started running at 2024-08-31 01:27:25.946354"
+
+[[104]]
+[1] "Column 26 got past the first result in the first optimization routine at 2024-08-31 01:28:44.169507"
+
+[[105]]
+[1] "Column 26 got past the second result in the first optimization routine at 2024-08-31 01:28:44.170127"
+
+[[106]]
+[1] "Column 26 got past the third result in the first optimization routine at 2024-08-31 01:28:44.170317"
+
+[[107]]
+[1] "Column 27 in the first optimization routine started running at 2024-08-31 01:28:44.170589"
+
+[[108]]
+[1] "Column 27 got past the first result in the first optimization routine at 2024-08-31 01:30:06.915385"
+
+[[109]]
+[1] "Column 27 got past the second result in the first optimization routine at 2024-08-31 01:30:06.915913"
+
+[[110]]
+[1] "Column 27 got past the third result in the first optimization routine at 2024-08-31 01:30:06.916181"
+
+[[111]]
+[1] "Column 28 in the first optimization routine started running at 2024-08-31 01:30:06.916438"
+
+[[112]]
+[1] "Column 28 got past the first result in the first optimization routine at 2024-08-31 04:07:15.090498"
+
+[[113]]
+[1] "Column 28 got past the second result in the first optimization routine at 2024-08-31 04:07:15.090926"
+
+[[114]]
+[1] "Column 28 got past the third result in the first optimization routine at 2024-08-31 04:07:36.210533"
+
+[[115]]
+[1] "Column 29 in the first optimization routine started running at 2024-08-31 04:07:36.211124"
+
+[[116]]
+[1] "Column 29 got past the first result in the first optimization routine at 2024-08-31 04:09:59.638707"
+
+[[117]]
+[1] "Column 29 got past the second result in the first optimization routine at 2024-08-31 04:09:59.639102"
+
+[[118]]
+[1] "Column 29 got past the third result in the first optimization routine at 2024-08-31 04:10:19.226098"
+
+[[119]]
+[1] "Column 30 in the first optimization routine started running at 2024-08-31 04:10:19.226662"
+
+[[120]]
+[1] "Column 30 got past the first result in the first optimization routine at 2024-08-31 04:10:58.152319"
+
+[[121]]
+[1] "Column 30 got past the second result in the first optimization routine at 2024-08-31 04:10:58.152756"
+
+[[122]]
+[1] "Column 30 got past the third result in the first optimization routine at 2024-08-31 04:11:19.804784"
+
+[[123]]
+[1] "Column 31 in the first optimization routine started running at 2024-08-31 04:11:19.805315"
+
+[[124]]
+[1] "Column 31 got past the first result in the first optimization routine at 2024-08-31 04:11:45.636292"
+
+[[125]]
+[1] "Column 31 got past the second result in the first optimization routine at 2024-08-31 04:11:45.636879"
+
+[[126]]
+[1] "Column 31 got past the third result in the first optimization routine at 2024-08-31 04:12:04.785609"
+
+[[127]]
+[1] "Column 32 in the first optimization routine started running at 2024-08-31 04:12:04.786299"
+
+[[128]]
+[1] "Column 32 got past the first result in the first optimization routine at 2024-08-31 04:12:28.878699"
+
+[[129]]
+[1] "Column 32 got past the second result in the first optimization routine at 2024-08-31 04:12:28.879741"
+
+[[130]]
+[1] "Column 32 got past the third result in the first optimization routine at 2024-08-31 04:21:36.257915"
+
+[[131]]
+[1] "Column 33 in the first optimization routine started running at 2024-08-31 04:21:36.258568"
+
+[[132]]
+[1] "Column 33 got past the first result in the first optimization routine at 2024-08-31 04:22:01.811905"
+
+[[133]]
+[1] "Column 33 got past the second result in the first optimization routine at 2024-08-31 04:22:01.813233"
+
+[[134]]
+[1] "Column 33 got past the third result in the first optimization routine at 2024-08-31 04:22:15.142508"
+
+[[135]]
+[1] "Column 34 in the first optimization routine started running at 2024-08-31 04:22:15.143379"
+
+[[136]]
+[1] "Column 34 got past the first result in the first optimization routine at 2024-08-31 04:22:46.204738"
+
+[[137]]
+[1] "Column 34 got past the second result in the first optimization routine at 2024-08-31 04:22:46.2053"
+
+[[138]]
+[1] "Column 34 got past the third result in the first optimization routine at 2024-08-31 04:22:46.205457"
+
+[[139]]
+[1] "Column 35 in the first optimization routine started running at 2024-08-31 04:22:46.205665"
+
+[[140]]
+[1] "Column 35 got past the first result in the first optimization routine at 2024-08-31 04:23:21.850759"
+
+[[141]]
+[1] "Column 35 got past the second result in the first optimization routine at 2024-08-31 04:23:21.851441"
+
+[[142]]
+[1] "Column 35 got past the third result in the first optimization routine at 2024-08-31 04:23:42.069353"
+
+[[143]]
+[1] "Column 36 in the first optimization routine started running at 2024-08-31 04:23:42.069992"
+
+[[144]]
+[1] "Column 36 got past the first result in the first optimization routine at 2024-08-31 04:24:08.403896"
+
+[[145]]
+[1] "Column 36 got past the second result in the first optimization routine at 2024-08-31 04:24:08.404672"
+
+[[146]]
+[1] "Column 36 got past the third result in the first optimization routine at 2024-08-31 04:24:08.404909"
+
+[[147]]
+[1] "Column 37 in the first optimization routine started running at 2024-08-31 04:24:08.405652"
+
+[[148]]
+[1] "Column 37 got past the first result in the first optimization routine at 2024-08-31 04:25:14.446427"
+
+[[149]]
+[1] "Column 37 got past the second result in the first optimization routine at 2024-08-31 04:25:14.446838"
+
+[[150]]
+[1] "Column 37 got past the third result in the first optimization routine at 2024-08-31 04:25:34.362836"
+
+[[151]]
+[1] "Column 38 in the first optimization routine started running at 2024-08-31 04:25:34.363471"
+
+[[152]]
+[1] "Column 38 got past the first result in the first optimization routine at 2024-08-31 04:26:03.267948"
+
+[[153]]
+[1] "Column 38 got past the second result in the first optimization routine at 2024-08-31 04:26:03.268447"
+
+[[154]]
+[1] "Column 38 got past the third result in the first optimization routine at 2024-08-31 04:26:22.363399"
+
+[[155]]
+[1] "Column 39 in the first optimization routine started running at 2024-08-31 04:26:22.365023"
+
+[[156]]
+[1] "Column 39 got past the first result in the first optimization routine at 2024-08-31 04:27:00.281385"
+
+[[157]]
+[1] "Column 39 got past the second result in the first optimization routine at 2024-08-31 04:27:00.282051"
+
+[[158]]
+[1] "Column 39 got past the third result in the first optimization routine at 2024-08-31 04:27:18.060196"
+
+[[159]]
+[1] "Column 40 in the first optimization routine started running at 2024-08-31 04:27:18.060689"
+
+[[160]]
+[1] "Column 40 got past the first result in the first optimization routine at 2024-08-31 04:35:57.260389"
+
+[[161]]
+[1] "Column 40 got past the second result in the first optimization routine at 2024-08-31 04:35:57.260963"
+
+[[162]]
+[1] "Column 40 got past the third result in the first optimization routine at 2024-08-31 04:36:19.343226"
+
+[[163]]
+[1] "Column 41 in the first optimization routine started running at 2024-08-31 04:36:19.344574"
+
+[[164]]
+[1] "Column 41 got past the first result in the first optimization routine at 2024-08-31 04:37:26.239056"
+
+[[165]]
+[1] "Column 41 got past the second result in the first optimization routine at 2024-08-31 04:37:26.239589"
+
+[[166]]
+[1] "Column 41 got past the third result in the first optimization routine at 2024-08-31 04:37:46.324939"
+
+[[167]]
+[1] "Column 42 in the first optimization routine started running at 2024-08-31 04:37:46.325609"
+
+[[168]]
+[1] "Column 42 got past the first result in the first optimization routine at 2024-08-31 04:40:55.414839"
+
+[[169]]
+[1] "Column 42 got past the second result in the first optimization routine at 2024-08-31 04:40:55.41525"
+
+[[170]]
+[1] "Column 42 got past the third result in the first optimization routine at 2024-08-31 04:41:11.746515"
+
+[[171]]
+[1] "Column 43 in the first optimization routine started running at 2024-08-31 04:41:11.748067"
+
+[[172]]
+[1] "Column 43 got past the first result in the first optimization routine at 2024-08-31 04:41:44.242768"
+
+[[173]]
+[1] "Column 43 got past the second result in the first optimization routine at 2024-08-31 04:41:44.243519"
+
+[[174]]
+[1] "Column 43 got past the third result in the first optimization routine at 2024-08-31 04:41:57.548007"
+
+[[175]]
+[1] "Column 44 in the first optimization routine started running at 2024-08-31 04:41:57.54906"
+
+[[176]]
+[1] "Column 44 got past the first result in the first optimization routine at 2024-08-31 04:42:20.13604"
+
+[[177]]
+[1] "Column 44 got past the second result in the first optimization routine at 2024-08-31 04:42:20.136695"
+
+[[178]]
+[1] "Column 44 got past the third result in the first optimization routine at 2024-08-31 04:42:44.768792"
+
+[[179]]
+[1] "Column 45 in the first optimization routine started running at 2024-08-31 04:42:44.769975"
+
+[[180]]
+[1] "Column 45 got past the first result in the first optimization routine at 2024-08-31 04:58:10.562882"
+
+[[181]]
+[1] "Column 45 got past the second result in the first optimization routine at 2024-08-31 04:58:10.564521"
+
+[[182]]
+[1] "Column 45 got past the third result in the first optimization routine at 2024-08-31 04:58:25.106684"
+
+[[183]]
+[1] "Column 46 in the first optimization routine started running at 2024-08-31 04:58:25.107703"
+
+[[184]]
+[1] "Column 46 got past the first result in the first optimization routine at 2024-08-31 04:59:17.323211"
+
+[[185]]
+[1] "Column 46 got past the second result in the first optimization routine at 2024-08-31 04:59:17.324086"
+
+[[186]]
+[1] "Column 46 got past the third result in the first optimization routine at 2024-08-31 04:59:27.627978"
+
+[[187]]
+[1] "Column 47 in the first optimization routine started running at 2024-08-31 04:59:27.628858"
+
+[[188]]
+[1] "Column 47 got past the first result in the first optimization routine at 2024-08-31 05:00:09.05659"
+
+[[189]]
+[1] "Column 47 got past the second result in the first optimization routine at 2024-08-31 05:00:09.057393"
+
+[[190]]
+[1] "Column 47 got past the third result in the first optimization routine at 2024-08-31 05:00:09.057579"
+
+[[191]]
+[1] "Column 48 in the first optimization routine started running at 2024-08-31 05:00:09.058343"
+
+[[192]]
+[1] "Column 48 got past the first result in the first optimization routine at 2024-08-31 05:00:30.733669"
+
+[[193]]
+[1] "Column 48 got past the second result in the first optimization routine at 2024-08-31 05:00:30.734565"
+
+[[194]]
+[1] "Column 48 got past the third result in the first optimization routine at 2024-08-31 05:03:22.304936"
+
+[[195]]
+[1] "Column 49 in the first optimization routine started running at 2024-08-31 05:03:22.305905"
+
+[[196]]
+[1] "Column 49 got past the first result in the first optimization routine at 2024-08-31 05:03:47.558062"
+
+[[197]]
+[1] "Column 49 got past the second result in the first optimization routine at 2024-08-31 05:03:47.558841"
+
+[[198]]
+[1] "Column 49 got past the third result in the first optimization routine at 2024-08-31 05:03:47.559001"
+
+[[199]]
+[1] "Column 50 in the first optimization routine started running at 2024-08-31 05:03:47.559229"
+
+[[200]]
+[1] "Column 50 got past the first result in the first optimization routine at 2024-08-31 05:04:22.914734"
+
+[[201]]
+[1] "Column 50 got past the second result in the first optimization routine at 2024-08-31 05:04:22.916461"
+
+[[202]]
+[1] "Column 50 got past the third result in the first optimization routine at 2024-08-31 05:04:48.71654"
+
+[[203]]
+[1] "Column 51 in the first optimization routine started running at 2024-08-31 05:04:48.717341"
+
+[[204]]
+[1] "Column 51 got past the first result in the first optimization routine at 2024-08-31 05:05:27.091171"
+
+[[205]]
+[1] "Column 51 got past the second result in the first optimization routine at 2024-08-31 05:05:27.091815"
+
+[[206]]
+[1] "Column 51 got past the third result in the first optimization routine at 2024-08-31 05:05:27.092028"
+
+[[207]]
+[1] "Column 52 in the first optimization routine started running at 2024-08-31 05:05:27.092269"
+
+[[208]]
+[1] "Column 52 got past the first result in the first optimization routine at 2024-08-31 05:06:05.115509"
+
+[[209]]
+[1] "Column 52 got past the second result in the first optimization routine at 2024-08-31 05:06:05.116273"
+
+[[210]]
+[1] "Column 52 got past the third result in the first optimization routine at 2024-08-31 05:23:53.674721"
+
+[[211]]
+[1] "Column 53 in the first optimization routine started running at 2024-08-31 05:23:53.675501"
+
+[[212]]
+[1] "Column 53 got past the first result in the first optimization routine at 2024-08-31 05:25:41.21797"
+
+[[213]]
+[1] "Column 53 got past the second result in the first optimization routine at 2024-08-31 05:25:41.218473"
+
+[[214]]
+[1] "Column 53 got past the third result in the first optimization routine at 2024-08-31 05:25:41.218693"
+
+[[215]]
+[1] "Column 54 in the first optimization routine started running at 2024-08-31 05:25:41.218906"
+
+[[216]]
+[1] "Column 54 got past the first result in the first optimization routine at 2024-08-31 05:26:27.627712"
+
+[[217]]
+[1] "Column 54 got past the second result in the first optimization routine at 2024-08-31 05:26:27.628174"
+
+[[218]]
+[1] "Column 54 got past the third result in the first optimization routine at 2024-08-31 05:26:45.867631"
+
+[[219]]
+[1] "Column 55 in the first optimization routine started running at 2024-08-31 05:26:45.86858"
+
+[[220]]
+[1] "Column 55 got past the first result in the first optimization routine at 2024-08-31 05:27:14.184533"
+
+[[221]]
+[1] "Column 55 got past the second result in the first optimization routine at 2024-08-31 05:27:14.185264"
+
+[[222]]
+[1] "Column 55 got past the third result in the first optimization routine at 2024-08-31 05:27:14.185369"
+
+[[223]]
+[1] "Column 56 in the first optimization routine started running at 2024-08-31 05:27:14.185758"
+
+[[224]]
+[1] "Column 56 got past the first result in the first optimization routine at 2024-08-31 05:27:48.342942"
+
+[[225]]
+[1] "Column 56 got past the second result in the first optimization routine at 2024-08-31 05:27:48.343647"
+
+[[226]]
+[1] "Column 56 got past the third result in the first optimization routine at 2024-08-31 05:35:56.418093"
+
+[[227]]
+[1] "Column 57 in the first optimization routine started running at 2024-08-31 05:35:56.41857"
+
+[[228]]
+[1] "Column 57 got past the first result in the first optimization routine at 2024-08-31 05:36:24.388484"
+
+[[229]]
+[1] "Column 57 got past the second result in the first optimization routine at 2024-08-31 05:36:24.389092"
+
+[[230]]
+[1] "Column 57 got past the third result in the first optimization routine at 2024-08-31 05:36:34.68968"
+
+[[231]]
+[1] "Column 58 in the first optimization routine started running at 2024-08-31 05:36:34.690283"
+
+[[232]]
+[1] "Column 58 got past the first result in the first optimization routine at 2024-08-31 05:37:16.830969"
+
+[[233]]
+[1] "Column 58 got past the second result in the first optimization routine at 2024-08-31 05:37:16.831971"
+
+[[234]]
+[1] "Column 58 got past the third result in the first optimization routine at 2024-08-31 05:37:31.00138"
+
+[[235]]
+[1] "Column 59 in the first optimization routine started running at 2024-08-31 05:37:31.002791"
+
+[[236]]
+[1] "Column 59 got past the first result in the first optimization routine at 2024-08-31 05:37:55.778591"
+
+[[237]]
+[1] "Column 59 got past the second result in the first optimization routine at 2024-08-31 05:37:55.779258"
+
+[[238]]
+[1] "Column 59 got past the third result in the first optimization routine at 2024-08-31 05:38:23.476151"
+
+[[239]]
+[1] "Column 60 in the first optimization routine started running at 2024-08-31 05:38:23.477137"
+
+[[240]]
+[1] "Column 60 got past the first result in the first optimization routine at 2024-08-31 05:38:58.525071"
+
+[[241]]
+[1] "Column 60 got past the second result in the first optimization routine at 2024-08-31 05:38:58.52574"
+
+[[242]]
+[1] "Column 60 got past the third result in the first optimization routine at 2024-08-31 05:39:12.619371"
+
+[[243]]
+[1] "Column 61 in the first optimization routine started running at 2024-08-31 05:39:12.620163"
+
+[[244]]
+[1] "Column 61 got past the first result in the first optimization routine at 2024-08-31 05:39:26.397822"
+
+[[245]]
+[1] "Column 61 got past the second result in the first optimization routine at 2024-08-31 05:39:26.398439"
+
+[[246]]
+[1] "Column 61 got past the third result in the first optimization routine at 2024-08-31 05:39:40.377314"
+
+[[247]]
+[1] "Column 62 in the first optimization routine started running at 2024-08-31 05:39:40.379185"
+
+[[248]]
+[1] "Column 62 got past the first result in the first optimization routine at 2024-08-31 05:49:39.185308"
+
+[[249]]
+[1] "Column 62 got past the second result in the first optimization routine at 2024-08-31 05:49:39.186191"
+
+[[250]]
+[1] "Column 62 got past the third result in the first optimization routine at 2024-08-31 05:50:03.91885"
+
+[[251]]
+[1] "Column 63 in the first optimization routine started running at 2024-08-31 05:50:03.919553"
+
+[[252]]
+[1] "Column 63 got past the first result in the first optimization routine at 2024-08-31 05:50:03.993915"
+
+[[253]]
+[1] "Column 63 got past the second result in the first optimization routine at 2024-08-31 05:50:03.994405"
+
+[[254]]
+[1] "Column 63 got past the third result in the first optimization routine at 2024-08-31 05:50:03.994899"
+
+[[255]]
+[1] "Column 64 in the first optimization routine started running at 2024-08-31 05:50:03.99527"
+
+[[256]]
+[1] "Column 64 got past the first result in the first optimization routine at 2024-08-31 05:50:27.255354"
+
+[[257]]
+[1] "Column 64 got past the second result in the first optimization routine at 2024-08-31 05:50:27.256014"
+
+[[258]]
+[1] "Column 64 got past the third result in the first optimization routine at 2024-08-31 05:50:44.006859"
+
+[[259]]
+[1] "Column 65 in the first optimization routine started running at 2024-08-31 05:50:44.007526"
+
+[[260]]
+[1] "Column 65 got past the first result in the first optimization routine at 2024-08-31 05:56:04.52014"
+
+[[261]]
+[1] "Column 65 got past the second result in the first optimization routine at 2024-08-31 05:56:04.520631"
+
+[[262]]
+[1] "Column 65 got past the third result in the first optimization routine at 2024-08-31 05:56:20.685878"
+
+[[263]]
+[1] "Column 66 in the first optimization routine started running at 2024-08-31 05:56:20.686317"
+
+[[264]]
+[1] "Column 66 got past the first result in the first optimization routine at 2024-08-31 06:00:49.838188"
+
+[[265]]
+[1] "Column 66 got past the second result in the first optimization routine at 2024-08-31 06:00:49.838796"
+
+[[266]]
+[1] "Column 66 got past the third result in the first optimization routine at 2024-08-31 06:00:49.839062"
+
+[[267]]
+[1] "Column 67 in the first optimization routine started running at 2024-08-31 06:00:49.839335"
+
+[[268]]
+[1] "Column 67 got past the first result in the first optimization routine at 2024-08-31 06:04:45.483308"
+
+[[269]]
+[1] "Column 67 got past the second result in the first optimization routine at 2024-08-31 06:04:45.484007"
+
+[[270]]
+[1] "Column 67 got past the third result in the first optimization routine at 2024-08-31 06:04:45.484213"
+
+[[271]]
+[1] "Column 68 in the first optimization routine started running at 2024-08-31 06:04:45.484467"
+
+[[272]]
+[1] "Column 68 got past the first result in the first optimization routine at 2024-08-31 06:05:05.570939"
+
+[[273]]
+[1] "Column 68 got past the second result in the first optimization routine at 2024-08-31 06:05:05.572852"
+
+[[274]]
+[1] "Column 68 got past the third result in the first optimization routine at 2024-08-31 06:05:23.722018"
+
+[[275]]
+[1] "Column 69 in the first optimization routine started running at 2024-08-31 06:05:23.722706"
+
+[[276]]
+[1] "Column 69 got past the first result in the first optimization routine at 2024-08-31 06:05:45.499441"
+
+[[277]]
+[1] "Column 69 got past the second result in the first optimization routine at 2024-08-31 06:05:45.500269"
+
+[[278]]
+[1] "Column 69 got past the third result in the first optimization routine at 2024-08-31 06:05:45.500357"
+
+[[279]]
+[1] "Column 70 in the first optimization routine started running at 2024-08-31 06:05:45.500454"
+
+[[280]]
+[1] "Column 70 got past the first result in the first optimization routine at 2024-08-31 06:06:24.171675"
+
+[[281]]
+[1] "Column 70 got past the second result in the first optimization routine at 2024-08-31 06:06:24.172236"
+
+[[282]]
+[1] "Column 70 got past the third result in the first optimization routine at 2024-08-31 06:06:24.172414"
+
+[[283]]
+[1] "Column 71 in the first optimization routine started running at 2024-08-31 06:06:24.172655"
+
+[[284]]
+[1] "Column 71 got past the first result in the first optimization routine at 2024-08-31 06:22:29.728595"
+
+[[285]]
+[1] "Column 71 got past the second result in the first optimization routine at 2024-08-31 06:22:29.729087"
+
+[[286]]
+[1] "Column 71 got past the third result in the first optimization routine at 2024-08-31 06:22:29.729242"
+
+[[287]]
+[1] "Column 72 in the first optimization routine started running at 2024-08-31 06:22:29.72961"
+
+[[288]]
+[1] "Column 72 got past the first result in the first optimization routine at 2024-08-31 06:23:14.472471"
+
+[[289]]
+[1] "Column 72 got past the second result in the first optimization routine at 2024-08-31 06:23:14.473546"
+
+[[290]]
+[1] "Column 72 got past the third result in the first optimization routine at 2024-08-31 06:23:14.473715"
+
+[[291]]
+[1] "Column 73 in the first optimization routine started running at 2024-08-31 06:23:14.473852"
+
+[[292]]
+[1] "Column 73 got past the first result in the first optimization routine at 2024-08-31 06:23:44.511787"
+
+[[293]]
+[1] "Column 73 got past the second result in the first optimization routine at 2024-08-31 06:23:44.512744"
+
+[[294]]
+[1] "Column 73 got past the third result in the first optimization routine at 2024-08-31 06:23:44.512914"
+
+[[295]]
+[1] "Column 74 in the first optimization routine started running at 2024-08-31 06:23:44.513133"
+
+[[296]]
+[1] "Column 74 got past the first result in the first optimization routine at 2024-08-31 06:23:54.016781"
+
+[[297]]
+[1] "Column 74 got past the second result in the first optimization routine at 2024-08-31 06:23:54.017779"
+
+[[298]]
+[1] "Column 74 got past the third result in the first optimization routine at 2024-08-31 06:24:02.893159"
+
+[[299]]
+[1] "Column 75 in the first optimization routine started running at 2024-08-31 06:24:02.894241"
+
+[[300]]
+[1] "Column 75 got past the first result in the first optimization routine at 2024-08-31 06:24:53.800273"
+
+[[301]]
+[1] "Column 75 got past the second result in the first optimization routine at 2024-08-31 06:24:53.800977"
+
+[[302]]
+[1] "Column 75 got past the third result in the first optimization routine at 2024-08-31 06:24:53.802271"
+
+[[303]]
+[1] "Column 76 in the first optimization routine started running at 2024-08-31 06:24:53.802357"
+
+[[304]]
+[1] "Column 76 got past the first result in the first optimization routine at 2024-08-31 06:40:39.73443"
+
+[[305]]
+[1] "Column 76 got past the second result in the first optimization routine at 2024-08-31 06:40:39.735101"
+
+[[306]]
+[1] "Column 76 got past the third result in the first optimization routine at 2024-08-31 06:40:52.710922"
+
+[[307]]
+[1] "Column 77 in the first optimization routine started running at 2024-08-31 06:40:52.711664"
+
+[[308]]
+[1] "Column 77 got past the first result in the first optimization routine at 2024-08-31 06:41:23.879894"
+
+[[309]]
+[1] "Column 77 got past the second result in the first optimization routine at 2024-08-31 06:41:23.880535"
+
+[[310]]
+[1] "Column 77 got past the third result in the first optimization routine at 2024-08-31 06:41:23.880715"
+
+[[311]]
+[1] "Column 78 in the first optimization routine started running at 2024-08-31 06:41:23.881019"
+
+[[312]]
+[1] "Column 78 got past the first result in the first optimization routine at 2024-08-31 06:41:47.854783"
+
+[[313]]
+[1] "Column 78 got past the second result in the first optimization routine at 2024-08-31 06:41:47.855498"
+
+[[314]]
+[1] "Column 78 got past the third result in the first optimization routine at 2024-08-31 06:41:47.855663"
+
+[[315]]
+[1] "Column 79 in the first optimization routine started running at 2024-08-31 06:41:47.855934"
+
+[[316]]
+[1] "Column 79 got past the first result in the first optimization routine at 2024-08-31 06:42:20.519572"
+
+[[317]]
+[1] "Column 79 got past the second result in the first optimization routine at 2024-08-31 06:42:20.520368"
+
+[[318]]
+[1] "Column 79 got past the third result in the first optimization routine at 2024-08-31 06:42:42.576709"
+
+[[319]]
+[1] "Column 80 in the first optimization routine started running at 2024-08-31 06:42:42.577425"
+
+[[320]]
+[1] "Column 80 got past the first result in the first optimization routine at 2024-08-31 06:43:07.11163"
+
+[[321]]
+[1] "Column 80 got past the second result in the first optimization routine at 2024-08-31 06:43:07.112344"
+
+[[322]]
+[1] "Column 80 got past the third result in the first optimization routine at 2024-08-31 06:43:07.112596"
+
+[[323]]
+[1] "Column 81 in the first optimization routine started running at 2024-08-31 06:43:07.112818"
+
+[[324]]
+[1] "Column 81 got past the first result in the first optimization routine at 2024-08-31 06:43:37.576216"
+
+[[325]]
+[1] "Column 81 got past the second result in the first optimization routine at 2024-08-31 06:43:37.576642"
+
+[[326]]
+[1] "Column 81 got past the third result in the first optimization routine at 2024-08-31 06:43:37.576923"
+
+[[327]]
+[1] "Column 82 in the first optimization routine started running at 2024-08-31 06:43:37.577196"
+
+[[328]]
+[1] "Column 82 got past the first result in the first optimization routine at 2024-08-31 06:44:23.360946"
+
+[[329]]
+[1] "Column 82 got past the second result in the first optimization routine at 2024-08-31 06:44:23.361826"
+
+[[330]]
+[1] "Column 82 got past the third result in the first optimization routine at 2024-08-31 06:44:47.112098"
+
+[[331]]
+[1] "Column 83 in the first optimization routine started running at 2024-08-31 06:44:47.112914"
+
+[[332]]
+[1] "Column 83 got past the first result in the first optimization routine at 2024-08-31 06:45:11.632247"
+
+[[333]]
+[1] "Column 83 got past the second result in the first optimization routine at 2024-08-31 06:45:11.63295"
+
+[[334]]
+[1] "Column 83 got past the third result in the first optimization routine at 2024-08-31 06:45:25.093052"
+
+[[335]]
+[1] "Column 84 in the first optimization routine started running at 2024-08-31 06:45:25.09419"
+
+[[336]]
+[1] "Column 84 got past the first result in the first optimization routine at 2024-08-31 06:45:51.609861"
+
+[[337]]
+[1] "Column 84 got past the second result in the first optimization routine at 2024-08-31 06:45:51.61083"
+
+[[338]]
+[1] "Column 84 got past the third result in the first optimization routine at 2024-08-31 06:45:51.610985"
+
+[[339]]
+[1] "Column 85 in the first optimization routine started running at 2024-08-31 06:45:51.611171"
+
+[[340]]
+[1] "Column 85 got past the first result in the first optimization routine at 2024-08-31 06:46:29.766326"
+
+[[341]]
+[1] "Column 85 got past the second result in the first optimization routine at 2024-08-31 06:46:29.767017"
+
+[[342]]
+[1] "Column 85 got past the third result in the first optimization routine at 2024-08-31 06:46:29.767188"
+
+[[343]]
+[1] "Column 86 in the first optimization routine started running at 2024-08-31 06:46:29.767374"
+
+[[344]]
+[1] "Column 86 got past the first result in the first optimization routine at 2024-08-31 06:47:56.804056"
+
+[[345]]
+[1] "Column 86 got past the second result in the first optimization routine at 2024-08-31 06:47:56.804849"
+
+[[346]]
+[1] "Column 86 got past the third result in the first optimization routine at 2024-08-31 06:48:22.993878"
+
+[[347]]
+[1] "Column 87 in the first optimization routine started running at 2024-08-31 06:48:22.995057"
+
+[[348]]
+[1] "Column 87 got past the first result in the first optimization routine at 2024-08-31 06:48:42.488464"
+
+[[349]]
+[1] "Column 87 got past the second result in the first optimization routine at 2024-08-31 06:48:42.489155"
+
+[[350]]
+[1] "Column 87 got past the third result in the first optimization routine at 2024-08-31 06:48:42.489451"
+
+[[351]]
+[1] "Column 88 in the first optimization routine started running at 2024-08-31 06:48:42.490651"
+
+[[352]]
+[1] "Column 88 got past the first result in the first optimization routine at 2024-08-31 06:49:09.690782"
+
+[[353]]
+[1] "Column 88 got past the second result in the first optimization routine at 2024-08-31 06:49:09.691472"
+
+[[354]]
+[1] "Column 88 got past the third result in the first optimization routine at 2024-08-31 06:49:09.691759"
+
+[[355]]
+[1] "Column 89 in the first optimization routine started running at 2024-08-31 06:49:09.692"
+
+[[356]]
+[1] "Column 89 got past the first result in the first optimization routine at 2024-08-31 06:49:47.767752"
+
+[[357]]
+[1] "Column 89 got past the second result in the first optimization routine at 2024-08-31 06:49:47.768458"
+
+[[358]]
+[1] "Column 89 got past the third result in the first optimization routine at 2024-08-31 06:50:06.840413"
+
+[[359]]
+[1] "Column 90 in the first optimization routine started running at 2024-08-31 06:50:06.841159"
+
+[[360]]
+[1] "Column 90 got past the first result in the first optimization routine at 2024-08-31 06:50:48.69168"
+
+[[361]]
+[1] "Column 90 got past the second result in the first optimization routine at 2024-08-31 06:50:48.692267"
+
+[[362]]
+[1] "Column 90 got past the third result in the first optimization routine at 2024-08-31 06:51:03.165626"
+
+[[363]]
+[1] "Column 91 in the first optimization routine started running at 2024-08-31 06:51:03.166613"
+
+[[364]]
+[1] "Column 91 got past the first result in the first optimization routine at 2024-08-31 06:51:49.524952"
+
+[[365]]
+[1] "Column 91 got past the second result in the first optimization routine at 2024-08-31 06:51:49.525543"
+
+[[366]]
+[1] "Column 91 got past the third result in the first optimization routine at 2024-08-31 06:52:02.407115"
+
+[[367]]
+[1] "Column 92 in the first optimization routine started running at 2024-08-31 06:52:02.40776"
+
+[[368]]
+[1] "Column 92 got past the first result in the first optimization routine at 2024-08-31 06:52:32.81292"
+
+[[369]]
+[1] "Column 92 got past the second result in the first optimization routine at 2024-08-31 06:52:32.814992"
+
+[[370]]
+[1] "Column 92 got past the third result in the first optimization routine at 2024-08-31 06:52:50.539344"
+
+[[371]]
+[1] "Column 93 in the first optimization routine started running at 2024-08-31 06:52:50.540011"
+
+[[372]]
+[1] "Column 93 got past the first result in the first optimization routine at 2024-08-31 06:53:28.084566"
+
+[[373]]
+[1] "Column 93 got past the second result in the first optimization routine at 2024-08-31 06:53:28.085225"
+
+[[374]]
+[1] "Column 93 got past the third result in the first optimization routine at 2024-08-31 06:53:51.197761"
+
+[[375]]
+[1] "Column 94 in the first optimization routine started running at 2024-08-31 06:53:51.198081"
+
+[[376]]
+[1] "Column 94 got past the first result in the first optimization routine at 2024-08-31 06:54:23.67249"
+
+[[377]]
+[1] "Column 94 got past the second result in the first optimization routine at 2024-08-31 06:54:23.672837"
+
+[[378]]
+[1] "Column 94 got past the third result in the first optimization routine at 2024-08-31 06:54:40.488192"
+
+[[379]]
+[1] "Column 95 in the first optimization routine started running at 2024-08-31 06:54:40.489089"
+
+[[380]]
+[1] "Column 95 got past the first result in the first optimization routine at 2024-08-31 06:55:56.344932"
+
+[[381]]
+[1] "Column 95 got past the second result in the first optimization routine at 2024-08-31 06:55:56.345672"
+
+[[382]]
+[1] "Column 95 got past the third result in the first optimization routine at 2024-08-31 06:55:56.345959"
+
+[[383]]
+[1] "Column 96 in the first optimization routine started running at 2024-08-31 06:55:56.346302"
+
+[[384]]
+[1] "Column 96 got past the first result in the first optimization routine at 2024-08-31 06:57:14.507118"
+
+[[385]]
+[1] "Column 96 got past the second result in the first optimization routine at 2024-08-31 06:57:14.507894"
+
+[[386]]
+[1] "Column 96 got past the third result in the first optimization routine at 2024-08-31 06:57:37.102884"
+
+[[387]]
+[1] "Column 97 in the first optimization routine started running at 2024-08-31 06:57:37.103763"
+
+[[388]]
+[1] "Column 97 got past the first result in the first optimization routine at 2024-08-31 06:58:40.480862"
+
+[[389]]
+[1] "Column 97 got past the second result in the first optimization routine at 2024-08-31 06:58:40.481632"
+
+[[390]]
+[1] "Column 97 got past the third result in the first optimization routine at 2024-08-31 06:59:05.820784"
+
+[[391]]
+[1] "Column 98 in the first optimization routine started running at 2024-08-31 06:59:05.821414"
+
+[[392]]
+[1] "Column 98 got past the first result in the first optimization routine at 2024-08-31 06:59:41.457062"
+
+[[393]]
+[1] "Column 98 got past the second result in the first optimization routine at 2024-08-31 06:59:41.457735"
+
+[[394]]
+[1] "Column 98 got past the third result in the first optimization routine at 2024-08-31 07:00:09.118276"
+
+[[395]]
+[1] "Column 99 in the first optimization routine started running at 2024-08-31 07:00:09.118968"
+
+[[396]]
+[1] "Column 99 got past the first result in the first optimization routine at 2024-08-31 07:00:47.686965"
+
+[[397]]
+[1] "Column 99 got past the second result in the first optimization routine at 2024-08-31 07:00:47.687828"
+
+[[398]]
+[1] "Column 99 got past the third result in the first optimization routine at 2024-08-31 07:01:14.274333"
+
+[[399]]
+[1] "Column 100 in the first optimization routine started running at 2024-08-31 07:01:14.274977"
+
+[[400]]
+[1] "Column 100 got past the first result in the first optimization routine at 2024-08-31 07:02:14.04295"
+
+[[401]]
+[1] "Column 100 got past the second result in the first optimization routine at 2024-08-31 07:02:14.043662"
+
+[[402]]
+[1] "Column 100 got past the third result in the first optimization routine at 2024-08-31 07:02:58.575827"
+
+[[403]]
+[1] "Column 101 in the first optimization routine started running at 2024-08-31 07:02:58.576461"
+
+[[404]]
+[1] "Column 101 got past the first result in the first optimization routine at 2024-08-31 07:03:27.001859"
+
+[[405]]
+[1] "Column 101 got past the second result in the first optimization routine at 2024-08-31 07:03:27.002501"
+
+[[406]]
+[1] "Column 101 got past the third result in the first optimization routine at 2024-08-31 07:03:27.002727"
+
+[[407]]
+[1] "Column 102 in the first optimization routine started running at 2024-08-31 07:03:27.002959"
+
+[[408]]
+[1] "Column 102 got past the first result in the first optimization routine at 2024-08-31 07:04:07.685"
+
+[[409]]
+[1] "Column 102 got past the second result in the first optimization routine at 2024-08-31 07:04:07.685901"
+
+[[410]]
+[1] "Column 102 got past the third result in the first optimization routine at 2024-08-31 07:04:07.686123"
+
+[[411]]
+[1] "Column 103 in the first optimization routine started running at 2024-08-31 07:04:07.686404"
+
+[[412]]
+[1] "Column 103 got past the first result in the first optimization routine at 2024-08-31 07:04:39.184634"
+
+[[413]]
+[1] "Column 103 got past the second result in the first optimization routine at 2024-08-31 07:04:39.185253"
+
+[[414]]
+[1] "Column 103 got past the third result in the first optimization routine at 2024-08-31 07:04:55.169967"
+
+[[415]]
+[1] "Column 104 in the first optimization routine started running at 2024-08-31 07:04:55.170642"
+
+[[416]]
+[1] "Column 104 got past the first result in the first optimization routine at 2024-08-31 07:05:29.78617"
+
+[[417]]
+[1] "Column 104 got past the second result in the first optimization routine at 2024-08-31 07:05:29.786828"
+
+[[418]]
+[1] "Column 104 got past the third result in the first optimization routine at 2024-08-31 07:05:50.255614"
+
+[[419]]
+[1] "Column 105 in the first optimization routine started running at 2024-08-31 07:05:50.256209"
+
+[[420]]
+[1] "Column 105 got past the first result in the first optimization routine at 2024-08-31 07:06:26.358555"
+
+[[421]]
+[1] "Column 105 got past the second result in the first optimization routine at 2024-08-31 07:06:26.358845"
+
+[[422]]
+[1] "Column 105 got past the third result in the first optimization routine at 2024-08-31 07:06:46.534718"
+
+[[423]]
+[1] "Column 106 in the first optimization routine started running at 2024-08-31 07:06:46.535675"
+
+[[424]]
+[1] "Column 106 got past the first result in the first optimization routine at 2024-08-31 07:07:17.553858"
+
+[[425]]
+[1] "Column 106 got past the second result in the first optimization routine at 2024-08-31 07:07:17.554677"
+
+[[426]]
+[1] "Column 106 got past the third result in the first optimization routine at 2024-08-31 07:07:17.554908"
+
+[[427]]
+[1] "Column 107 in the first optimization routine started running at 2024-08-31 07:07:17.555136"
+
+[[428]]
+[1] "Column 107 got past the first result in the first optimization routine at 2024-08-31 07:07:58.026204"
+
+[[429]]
+[1] "Column 107 got past the second result in the first optimization routine at 2024-08-31 07:07:58.028281"
+
+[[430]]
+[1] "Column 107 got past the third result in the first optimization routine at 2024-08-31 07:08:18.510998"
+
+[[431]]
+[1] "Column 108 in the first optimization routine started running at 2024-08-31 07:08:18.511806"
+
+[[432]]
+[1] "Column 108 got past the first result in the first optimization routine at 2024-08-31 07:09:30.220725"
+
+[[433]]
+[1] "Column 108 got past the second result in the first optimization routine at 2024-08-31 07:09:30.22147"
+
+[[434]]
+[1] "Column 108 got past the third result in the first optimization routine at 2024-08-31 07:09:30.221569"
+
+[[435]]
+[1] "Column 109 in the first optimization routine started running at 2024-08-31 07:09:30.221671"
+
+[[436]]
+[1] "Column 109 got past the first result in the first optimization routine at 2024-08-31 07:10:39.756606"
+
+[[437]]
+[1] "Column 109 got past the second result in the first optimization routine at 2024-08-31 07:10:39.757201"
+
+[[438]]
+[1] "Column 109 got past the third result in the first optimization routine at 2024-08-31 07:11:19.079142"
+
+[[439]]
+[1] "Column 110 in the first optimization routine started running at 2024-08-31 07:11:19.080164"
+
+[[440]]
+[1] "Column 110 got past the first result in the first optimization routine at 2024-08-31 07:11:42.257258"
+
+[[441]]
+[1] "Column 110 got past the second result in the first optimization routine at 2024-08-31 07:11:42.257615"
+
+[[442]]
+[1] "Column 110 got past the third result in the first optimization routine at 2024-08-31 07:11:42.257743"
+
+[[443]]
+[1] "Column 111 in the first optimization routine started running at 2024-08-31 07:11:42.257865"
+
+[[444]]
+[1] "Column 111 got past the first result in the first optimization routine at 2024-08-31 07:12:29.515071"
+
+[[445]]
+[1] "Column 111 got past the second result in the first optimization routine at 2024-08-31 07:12:29.515852"
+
+[[446]]
+[1] "Column 111 got past the third result in the first optimization routine at 2024-08-31 07:12:50.723767"
+
+[[447]]
+[1] "Column 112 in the first optimization routine started running at 2024-08-31 07:12:50.724749"
+
+[[448]]
+[1] "Column 112 got past the first result in the first optimization routine at 2024-08-31 07:13:28.043071"
+
+[[449]]
+[1] "Column 112 got past the second result in the first optimization routine at 2024-08-31 07:13:28.043898"
+
+[[450]]
+[1] "Column 112 got past the third result in the first optimization routine at 2024-08-31 07:13:28.044072"
+
+[[451]]
+[1] "Column 113 in the first optimization routine started running at 2024-08-31 07:13:28.044908"
+
+[[452]]
+[1] "Column 113 got past the first result in the first optimization routine at 2024-08-31 07:14:07.224599"
+
+[[453]]
+[1] "Column 113 got past the second result in the first optimization routine at 2024-08-31 07:14:07.225155"
+
+[[454]]
+[1] "Column 113 got past the third result in the first optimization routine at 2024-08-31 07:14:07.225329"
+
+[[455]]
+[1] "Column 114 in the first optimization routine started running at 2024-08-31 07:14:07.22561"
+
+[[456]]
+[1] "Column 114 got past the first result in the first optimization routine at 2024-08-31 07:15:00.990819"
+
+[[457]]
+[1] "Column 114 got past the second result in the first optimization routine at 2024-08-31 07:15:00.991403"
+
+[[458]]
+[1] "Column 114 got past the third result in the first optimization routine at 2024-08-31 07:15:10.403188"
+
+[[459]]
+[1] "Column 115 in the first optimization routine started running at 2024-08-31 07:15:10.404044"
+
+[[460]]
+[1] "Column 115 got past the first result in the first optimization routine at 2024-08-31 07:15:46.174741"
+
+[[461]]
+[1] "Column 115 got past the second result in the first optimization routine at 2024-08-31 07:15:46.175338"
+
+[[462]]
+[1] "Column 115 got past the third result in the first optimization routine at 2024-08-31 07:16:10.417299"
+
+[[463]]
+[1] "Column 116 in the first optimization routine started running at 2024-08-31 07:16:10.418083"
+
+[[464]]
+[1] "Column 116 got past the first result in the first optimization routine at 2024-08-31 07:17:04.15078"
+
+[[465]]
+[1] "Column 116 got past the second result in the first optimization routine at 2024-08-31 07:17:04.151453"
+
+[[466]]
+[1] "Column 116 got past the third result in the first optimization routine at 2024-08-31 07:17:31.33992"
+
+[[467]]
+[1] "Column 117 in the first optimization routine started running at 2024-08-31 07:17:31.340544"
+
+[[468]]
+[1] "Column 117 got past the first result in the first optimization routine at 2024-08-31 07:18:47.800579"
+
+[[469]]
+[1] "Column 117 got past the second result in the first optimization routine at 2024-08-31 07:18:47.801148"
+
+[[470]]
+[1] "Column 117 got past the third result in the first optimization routine at 2024-08-31 07:19:09.574865"
+
+[[471]]
+[1] "Column 118 in the first optimization routine started running at 2024-08-31 07:19:09.575335"
+
+[[472]]
+[1] "Column 118 got past the first result in the first optimization routine at 2024-08-31 07:19:42.441206"
+
+[[473]]
+[1] "Column 118 got past the second result in the first optimization routine at 2024-08-31 07:19:42.441536"
+
+[[474]]
+[1] "Column 118 got past the third result in the first optimization routine at 2024-08-31 07:19:42.442157"
+
+[[475]]
+[1] "Column 119 in the first optimization routine started running at 2024-08-31 07:19:42.442283"
+
+[[476]]
+[1] "Column 119 got past the first result in the first optimization routine at 2024-08-31 08:25:35.571632"
+
+[[477]]
+[1] "Column 119 got past the second result in the first optimization routine at 2024-08-31 08:25:35.572203"
+
+[[478]]
+[1] "Column 119 got past the third result in the first optimization routine at 2024-08-31 08:26:06.074478"
+
+[[479]]
+[1] "Column 120 in the first optimization routine started running at 2024-08-31 08:26:06.075472"
+
+[[480]]
+[1] "Column 120 got past the first result in the first optimization routine at 2024-08-31 08:26:46.909186"
+
+[[481]]
+[1] "Column 120 got past the second result in the first optimization routine at 2024-08-31 08:26:46.910004"
+
+[[482]]
+[1] "Column 120 got past the third result in the first optimization routine at 2024-08-31 08:27:24.605294"
+
+[[483]]
+[1] "Start of the second optimization : 2024-08-31 08:27:24.608108"
+
+[[484]]
+[1] "Column 1 in the second optimization routine started running at 2024-08-31 08:27:24.642275"
+
+[[485]]
+[1] "Column 2 in the second optimization routine started running at 2024-08-31 08:27:38.313363"
+
+[[486]]
+[1] "Column 3 in the second optimization routine started running at 2024-08-31 08:27:47.961154"
+
+[[487]]
+[1] "Column 4 in the second optimization routine started running at 2024-08-31 08:28:03.091793"
+
+[[488]]
+[1] "Column 5 in the second optimization routine started running at 2024-08-31 08:28:13.823775"
+
+[[489]]
+[1] "Column 6 in the second optimization routine started running at 2024-08-31 08:28:26.815514"
+
+[[490]]
+[1] "Column 7 in the second optimization routine started running at 2024-08-31 08:28:34.744576"
+
+[[491]]
+[1] "Column 8 in the second optimization routine started running at 2024-08-31 08:28:46.140772"
+
+[[492]]
+[1] "Column 9 in the second optimization routine started running at 2024-08-31 08:29:06.333363"
+
+[[493]]
+[1] "Column 10 in the second optimization routine started running at 2024-08-31 08:29:27.185751"
+
+[[494]]
+[1] "Column 11 in the second optimization routine started running at 2024-08-31 08:29:34.961818"
+
+[[495]]
+[1] "Column 12 in the second optimization routine started running at 2024-08-31 08:29:41.193246"
+
+[[496]]
+[1] "Column 13 in the second optimization routine started running at 2024-08-31 08:29:48.049005"
+
+[[497]]
+[1] "Column 14 in the second optimization routine started running at 2024-08-31 08:30:10.32138"
+
+[[498]]
+[1] "Column 15 in the second optimization routine started running at 2024-08-31 08:30:17.060597"
+
+[[499]]
+[1] "Column 16 in the second optimization routine started running at 2024-08-31 08:30:29.825858"
+
+[[500]]
+[1] "Column 17 in the second optimization routine started running at 2024-08-31 08:30:40.466156"
+
+[[501]]
+[1] "Column 18 in the second optimization routine started running at 2024-08-31 08:30:49.982341"
+
+[[502]]
+[1] "Column 19 in the second optimization routine started running at 2024-08-31 08:31:04.513758"
+
+[[503]]
+[1] "Column 20 in the second optimization routine started running at 2024-08-31 08:31:14.106552"
+
+[[504]]
+[1] "Column 21 in the second optimization routine started running at 2024-08-31 08:31:19.402017"
+
+[[505]]
+[1] "Column 22 in the second optimization routine started running at 2024-08-31 08:31:28.434686"
+
+[[506]]
+[1] "Column 23 in the second optimization routine started running at 2024-08-31 08:31:38.432879"
+
+[[507]]
+[1] "Column 24 in the second optimization routine started running at 2024-08-31 08:31:47.185427"
+
+[[508]]
+[1] "Column 25 in the second optimization routine started running at 2024-08-31 08:31:51.454005"
+
+[[509]]
+[1] "Column 26 in the second optimization routine started running at 2024-08-31 08:32:05.149548"
+
+[[510]]
+[1] "Column 27 in the second optimization routine started running at 2024-08-31 08:32:13.421652"
+
+[[511]]
+[1] "Column 28 in the second optimization routine started running at 2024-08-31 08:32:21.396939"
+
+[[512]]
+[1] "Column 29 in the second optimization routine started running at 2024-08-31 08:32:29.736114"
+
+[[513]]
+[1] "Column 30 in the second optimization routine started running at 2024-08-31 08:32:38.887618"
+
+[[514]]
+[1] "Column 31 in the second optimization routine started running at 2024-08-31 08:32:49.204141"
+
+[[515]]
+[1] "Column 32 in the second optimization routine started running at 2024-08-31 08:32:56.520741"
+
+[[516]]
+[1] "Column 33 in the second optimization routine started running at 2024-08-31 08:33:02.667802"
+
+[[517]]
+[1] "Column 34 in the second optimization routine started running at 2024-08-31 08:33:09.831763"
+
+[[518]]
+[1] "Column 35 in the second optimization routine started running at 2024-08-31 08:33:16.251339"
+
+[[519]]
+[1] "Column 36 in the second optimization routine started running at 2024-08-31 08:33:23.469495"
+
+[[520]]
+[1] "Column 37 in the second optimization routine started running at 2024-08-31 08:33:32.791892"
+
+[[521]]
+[1] "Column 38 in the second optimization routine started running at 2024-08-31 08:33:44.71761"
+
+[[522]]
+[1] "Column 39 in the second optimization routine started running at 2024-08-31 08:33:53.070584"
+
+[[523]]
+[1] "Column 40 in the second optimization routine started running at 2024-08-31 08:34:02.188515"
+
+[[524]]
+[1] "Column 41 in the second optimization routine started running at 2024-08-31 08:34:10.31173"
+
+[[525]]
+[1] "Column 42 in the second optimization routine started running at 2024-08-31 08:34:42.390708"
+
+[[526]]
+[1] "Column 43 in the second optimization routine started running at 2024-08-31 08:34:49.678386"
+
+[[527]]
+[1] "Column 44 in the second optimization routine started running at 2024-08-31 08:35:01.25071"
+
+[[528]]
+[1] "Column 45 in the second optimization routine started running at 2024-08-31 08:35:11.468132"
+
+[[529]]
+[1] "Column 46 in the second optimization routine started running at 2024-08-31 08:35:17.464972"
+
+[[530]]
+[1] "Column 47 in the second optimization routine started running at 2024-08-31 08:35:22.849136"
+
+[[531]]
+[1] "Column 48 in the second optimization routine started running at 2024-08-31 08:35:37.760782"
+
+[[532]]
+[1] "Column 49 in the second optimization routine started running at 2024-08-31 08:35:44.877676"
+
+[[533]]
+[1] "Column 50 in the second optimization routine started running at 2024-08-31 08:36:09.42052"
+
+[[534]]
+[1] "Column 51 in the second optimization routine started running at 2024-08-31 08:36:16.425609"
+
+[[535]]
+[1] "Column 52 in the second optimization routine started running at 2024-08-31 08:36:28.425927"
+
+[[536]]
+[1] "Column 53 in the second optimization routine started running at 2024-08-31 08:36:40.226081"
+
+[[537]]
+[1] "Column 54 in the second optimization routine started running at 2024-08-31 08:36:50.710716"
+
+[[538]]
+[1] "Column 55 in the second optimization routine started running at 2024-08-31 08:37:03.380132"
+
+[[539]]
+[1] "Column 56 in the second optimization routine started running at 2024-08-31 08:37:07.386302"
+
+[[540]]
+[1] "Column 57 in the second optimization routine started running at 2024-08-31 08:37:14.473741"
+
+[[541]]
+[1] "Column 58 in the second optimization routine started running at 2024-08-31 08:37:21.70573"
+
+[[542]]
+[1] "Column 59 in the second optimization routine started running at 2024-08-31 08:37:28.430756"
+
+[[543]]
+[1] "Column 60 in the second optimization routine started running at 2024-08-31 08:37:53.834551"
+
+[[544]]
+[1] "Column 61 in the second optimization routine started running at 2024-08-31 08:38:08.829189"
+
+[[545]]
+[1] "Column 62 in the second optimization routine started running at 2024-08-31 08:38:18.611651"
+
+[[546]]
+[1] "Column 63 in the second optimization routine started running at 2024-08-31 08:38:27.375989"
+
+[[547]]
+[1] "Column 64 in the second optimization routine started running at 2024-08-31 08:38:27.418955"
+
+[[548]]
+[1] "Column 65 in the second optimization routine started running at 2024-08-31 08:38:34.957894"
+
+[[549]]
+[1] "Column 66 in the second optimization routine started running at 2024-08-31 08:38:43.26655"
+
+[[550]]
+[1] "Column 67 in the second optimization routine started running at 2024-08-31 08:39:13.13723"
+
+[[551]]
+[1] "Column 68 in the second optimization routine started running at 2024-08-31 08:39:31.170583"
+
+[[552]]
+[1] "Column 69 in the second optimization routine started running at 2024-08-31 08:39:42.371264"
+
+[[553]]
+[1] "Column 70 in the second optimization routine started running at 2024-08-31 08:39:57.740008"
+
+[[554]]
+[1] "Column 71 in the second optimization routine started running at 2024-08-31 08:40:14.843208"
+
+[[555]]
+[1] "Column 72 in the second optimization routine started running at 2024-08-31 08:40:21.540442"
+
+[[556]]
+[1] "Column 73 in the second optimization routine started running at 2024-08-31 08:40:31.860501"
+
+[[557]]
+[1] "Column 74 in the second optimization routine started running at 2024-08-31 08:40:40.820943"
+
+[[558]]
+[1] "Column 75 in the second optimization routine started running at 2024-08-31 08:40:51.886718"
+
+[[559]]
+[1] "Column 76 in the second optimization routine started running at 2024-08-31 08:40:58.999054"
+
+[[560]]
+[1] "Column 77 in the second optimization routine started running at 2024-08-31 08:41:07.160762"
+
+[[561]]
+[1] "Column 78 in the second optimization routine started running at 2024-08-31 08:41:16.762852"
+
+[[562]]
+[1] "Column 79 in the second optimization routine started running at 2024-08-31 08:41:25.903823"
+
+[[563]]
+[1] "Column 80 in the second optimization routine started running at 2024-08-31 08:41:39.593158"
+
+[[564]]
+[1] "Column 81 in the second optimization routine started running at 2024-08-31 08:41:53.290548"
+
+[[565]]
+[1] "Column 82 in the second optimization routine started running at 2024-08-31 08:42:05.337144"
+
+[[566]]
+[1] "Column 83 in the second optimization routine started running at 2024-08-31 08:42:12.803981"
+
+[[567]]
+[1] "Column 84 in the second optimization routine started running at 2024-08-31 08:42:26.885195"
+
+[[568]]
+[1] "Column 85 in the second optimization routine started running at 2024-08-31 08:42:39.929007"
+
+[[569]]
+[1] "Column 86 in the second optimization routine started running at 2024-08-31 08:42:49.195911"
+
+[[570]]
+[1] "Column 87 in the second optimization routine started running at 2024-08-31 08:42:52.949878"
+
+[[571]]
+[1] "Column 88 in the second optimization routine started running at 2024-08-31 08:43:00.563409"
+
+[[572]]
+[1] "Column 89 in the second optimization routine started running at 2024-08-31 08:43:13.505579"
+
+[[573]]
+[1] "Column 90 in the second optimization routine started running at 2024-08-31 08:43:41.489109"
+
+[[574]]
+[1] "Column 91 in the second optimization routine started running at 2024-08-31 08:43:57.197318"
+
+[[575]]
+[1] "Column 92 in the second optimization routine started running at 2024-08-31 08:44:05.230606"
+
+[[576]]
+[1] "Column 93 in the second optimization routine started running at 2024-08-31 08:44:17.25618"
+
+[[577]]
+[1] "Column 94 in the second optimization routine started running at 2024-08-31 08:44:22.263886"
+
+[[578]]
+[1] "Column 95 in the second optimization routine started running at 2024-08-31 08:44:33.815419"
+
+[[579]]
+[1] "Column 96 in the second optimization routine started running at 2024-08-31 08:44:43.295286"
+
+[[580]]
+[1] "Column 97 in the second optimization routine started running at 2024-08-31 08:44:57.083031"
+
+[[581]]
+[1] "Column 98 in the second optimization routine started running at 2024-08-31 08:45:09.453499"
+
+[[582]]
+[1] "Column 99 in the second optimization routine started running at 2024-08-31 08:45:16.889705"
+
+[[583]]
+[1] "Column 100 in the second optimization routine started running at 2024-08-31 08:45:32.095347"
+
+[[584]]
+[1] "Column 101 in the second optimization routine started running at 2024-08-31 08:45:50.926223"
+
+[[585]]
+[1] "Column 102 in the second optimization routine started running at 2024-08-31 08:45:56.966261"
+
+[[586]]
+[1] "Column 103 in the second optimization routine started running at 2024-08-31 08:46:08.108939"
+
+[[587]]
+[1] "Column 104 in the second optimization routine started running at 2024-08-31 08:46:16.468391"
+
+[[588]]
+[1] "Column 105 in the second optimization routine started running at 2024-08-31 08:46:24.126713"
+
+[[589]]
+[1] "Column 106 in the second optimization routine started running at 2024-08-31 08:46:35.327116"
+
+[[590]]
+[1] "Column 107 in the second optimization routine started running at 2024-08-31 08:46:42.809991"
+
+[[591]]
+[1] "Column 108 in the second optimization routine started running at 2024-08-31 08:46:56.723045"
+
+[[592]]
+[1] "Column 109 in the second optimization routine started running at 2024-08-31 08:47:08.071904"
+
+[[593]]
+[1] "Column 110 in the second optimization routine started running at 2024-08-31 08:47:17.500256"
+
+[[594]]
+[1] "Column 111 in the second optimization routine started running at 2024-08-31 08:47:28.457967"
+
+[[595]]
+[1] "Column 112 in the second optimization routine started running at 2024-08-31 08:47:38.334746"
+
+[[596]]
+[1] "Column 113 in the second optimization routine started running at 2024-08-31 08:47:50.576037"
+
+[[597]]
+[1] "Column 114 in the second optimization routine started running at 2024-08-31 08:48:06.715913"
+
+[[598]]
+[1] "Column 115 in the second optimization routine started running at 2024-08-31 08:48:15.25894"
+
+[[599]]
+[1] "Column 116 in the second optimization routine started running at 2024-08-31 08:48:26.918866"
+
+[[600]]
+[1] "Column 117 in the second optimization routine started running at 2024-08-31 08:48:35.744046"
+
+[[601]]
+[1] "Column 118 in the second optimization routine started running at 2024-08-31 08:48:44.559732"
+
+[[602]]
+[1] "Column 119 in the second optimization routine started running at 2024-08-31 08:48:54.639759"
+
+[[603]]
+[1] "Column 120 in the second optimization routine started running at 2024-08-31 08:49:02.107627"
+
+[[604]]
+[1] "Start of the export: 2024-08-31 08:49:24.841157"
+
+[[605]]
+[1] "This code started running at: 2024-08-31 00:01:49.997003"
+
+[[606]]
+[1] "This code finished running at: 2024-08-31 08:49:24.935798"
+

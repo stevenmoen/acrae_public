@@ -1,4 +1,4 @@
-# This code reproduces Figures S1 and S2
+# This code reproduces Figures S1, S2, and S5
 
 # It is recommended to clear your environment before running this code. Uncomment and run the line below.
 # rm(list = ls())
@@ -15,10 +15,8 @@ library(tidyverse)
 data <- readMat(paste0(your_path_to_data, "Processed_Data/2011_Raw_Data/raw_2011_solar_data.mat"))
 data_2011_old = read.table(paste0(your_path_to_data, "data.txt"),header = F)
 
-
 # View the structure of your imported variables
 str(data$data)
-
 
 ##### Figure S1 #####
 r1c1 <- data$data[,,186]
