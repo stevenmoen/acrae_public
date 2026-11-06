@@ -49,7 +49,7 @@ Codes not named below may be helper functions needed for other codes to run prop
 | Figures S6-S18 | simulation/figure_S6_through_S18.R | Run the code |  |
 | Figure S19 | simulation/figure_S19_figure_S20.R | Run the code | By default, the code reads in a pre-run simulation since running it can take a while. |
 | Figure S20 | simulation/figure_S19_figure_S20.R | Run the code |  |
-| Table S4 | data_cleaning/new_data_cleaning_py_2011.R, estimation/paraFind_main - 2011.R | Run steps 1 and 2 from the data_cleaning/new_data_cleaning_py_2011.R code with the original 2011 data (data.txt in the data file), then randomly sample pixels within each region. Feed each dataset through to the estimation code. Repeat 500 times. |  |
+| Table S4 | data_cleaning/new_data_cleaning_py_2011.R, estimation/paraFind_main - 2011.R | Run steps 1 and 2 from the data_cleaning/new_data_cleaning_py_2011.R code with the original 2011 data (data.txt in the data file), then randomly sample 100 pixels within each region before taxing the maxima. Feed each dataset through to the estimation code. Repeat 500 times. |  |
 | Figure S21 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S22 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S23 | prediction/prediction_outputs.R | Run the code |  |
