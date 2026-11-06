@@ -42,7 +42,7 @@ Codes not named below may be helper functions needed for other codes to run prop
 | Figure S2 | descriptive_statistics/raw_data_visualization.R | Run the code | Note that the images in the paper have been brightened, but are generated from this dataset. |
 | Figure S3 | descriptive_statistics/figure_S3_table_S1.R | Run the code |  |
 | Table S1 | descriptive_statistics/figure_S3_table_S1.R | Run the code |  |
-| Figure S4 |  |  |  |
+| Figure S4 | estimation/paraFind_main - 2011.R | Modify the parameter constraints to fit a static GEV model (i.e. beta_1, gamma_1, beta_2, gamma_2, beta_4, and gamma_4 are all zero). Fit the static GEV Model for the entire dataset in SF2.r5c5, and then repeat the process a 200-observation window. Plot both the scale and shape parameters. |  |
 | Figure S5 |  |  |  |
 | Table S2 | simulation/simulation_core.R, estimation/paraFind_main - 2011.R | Run the first code, then the second after modification | Run the simulation study for 1,000 time steps, then estimate the MLE 500 times. You will need to modify the estimation code to work with your simulated data. It is recommended to only run the simulations for the six subareas. |
 | Table S3 | simulation/simulation_core.R, estimation/paraFind_main - 2011.R | Run the first code, then the second after modification | Run the simulation study for 5,000 time steps, then estimate the MLE 500 times. You will need to modify the estimation code to work with your simulated data. It is recommended to only run the simulations for the six subareas. |
