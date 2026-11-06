@@ -41,8 +41,8 @@ The simulation folder contains code related to simulations in the paper.
 | Table S1 | descriptive_statistics/figure_S3_table_S1.R | Run the code |  |
 | Figure S4 |  |  |  |
 | Figure S5 |  |  |  |
-| Table S2 |  |  |  |
-| Table S3 |  |  |  |
+| Table S2 | simulation/simulation_core.R, estimation/paraFind_main - 2011.R | Run the first code, then the second after modification | Run the simulation study for 1,000 time steps, then estimate the MLE 500 times. You will need to modify the estimation code. |
+| Table S3 | simulation/simulation_core.R, estimation/paraFind_main - 2011.R | Run the first code, then the second after modification | Run the simulation study for 5,000 time steps, then estimate the MLE 500 times. You will need to modify the estimation code. |
 | Figures S6-S18 | simulation/figure_S6_through_S18.R | Run the code |  |
 | Figure S19 | simulation/figure_S19_figure_S20.R | Run the code | By default, the code reads in a pre-run simulation since running it can take a while. |
 | Figure S20 | simulation/figure_S19_figure_S20.R | Run the code |  |
