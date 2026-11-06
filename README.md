@@ -37,13 +37,13 @@ The simulation folder contains code related to simulations in the paper.
 | Table 4 | prediction/table_3_table_4.R | Run the code |  |
 | Figure S1 |  |  |  |
 | Figure S2 |  |  |  |
-| Figure S3 |  |  |  |
-| Table S1 |  |  |  |
+| Figure S3 | descriptive_statistics/figure_S3_table_S1.R | Run the code |  |
+| Table S1 | descriptive_statistics/figure_S3_table_S1.R | Run the code |  |
 | Figure S4 |  |  |  |
 | Figure S5 |  |  |  |
 | Table S2 |  |  |  |
 | Table S3 |  |  |  |
-| Figures S6-S18 |  |  |  |
+| Figures S6-S18 | simulation/figure_S6_through_S18.R | Run the code |  |
 | Figure S19 |  |  |  |
 | Figure S20 |  |  |  |
 | Table S4 |  |  |  |
@@ -60,7 +60,7 @@ The simulation folder contains code related to simulations in the paper.
 | Table S11 |  |  | For stability, these parameters use a burn-in period of only 10 instead of the usual 100 |
 | Table S12 |  |  |  |
 | Table S13 |  |  |  |
-| Figure S25 | prediction/prediction_outputs.R | Run the code |  |
+| Figures S25-S36 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S26 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S27 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S28 | prediction/prediction_outputs.R | Run the code |  |
