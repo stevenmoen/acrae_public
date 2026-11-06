@@ -44,8 +44,8 @@ The simulation folder contains code related to simulations in the paper.
 | Table S2 |  |  |  |
 | Table S3 |  |  |  |
 | Figures S6-S18 | simulation/figure_S6_through_S18.R | Run the code |  |
-| Figure S19 |  |  |  |
-| Figure S20 |  |  |  |
+| Figure S19 | simulation/figure_S19_figure_S20.R | Run the code | By default, the code reads in a pre-run simulation since running it can take a while. |
+| Figure S20 | simulation/figure_S19_figure_S20.R | Run the code |  |
 | Table S4 |  |  |  |
 | Figure S21 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S22 | prediction/prediction_outputs.R | Run the code |  |
