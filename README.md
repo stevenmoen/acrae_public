@@ -51,7 +51,7 @@ The simulation folder contains code related to simulations in the paper.
 | Figure S22 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S23 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S24 | prediction/prediction_outputs.R | Run the code |  |
-| Table S5 |  |  |  |
+| Table S5 | N/A | Modify the parameter estimation code to point to data.txt | The parameter estimation code chooses a set of 10 starting parameter values, and then picks one that minimizes the negative log-likelihood. As a result, the parameter estimates will be slightly different than those in the Supplemental Material. |
 | Table S6 | estimation/paraFind_main - 2011.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist | Note that beta_2 and beta_4 are negative in the .csv but positive in the paper. This is not an error. The code assumes they are already negative, though equation 13 makes them negative. This is true for all parameters in the Supplemental Material. |
 | Table S7 | estimation/paraFind_main - 2017.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
 | Table S8 | estimation/paraFind_main - 2022.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
