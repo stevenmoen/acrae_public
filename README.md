@@ -26,7 +26,7 @@ The prediction folder contains code related to forecasting in the paper.
 
 The simulation folder contains code related to simulations in the paper.
 
-Codes not named below may be helper functions needed for the code to run properly.
+Codes not named below may be helper functions needed for other codes to run properly.
 
 ## Section 2
 
@@ -49,12 +49,12 @@ Codes not named below may be helper functions needed for the code to run properl
 | Figures S6-S18 | simulation/figure_S6_through_S18.R | Run the code |  |
 | Figure S19 | simulation/figure_S19_figure_S20.R | Run the code | By default, the code reads in a pre-run simulation since running it can take a while. |
 | Figure S20 | simulation/figure_S19_figure_S20.R | Run the code |  |
-| Table S4 |  |  |  |
+| Table S4 | data_cleaning/new_data_cleaning_py_2011.R, estimation/paraFind_main - 2011.R | Run steps 1 and 2 from the data_cleaning/new_data_cleaning_py_2011.R code with the original 2011 data (data.txt in the data file), then randomly sample pixels within each region. Feed each dataset through to the estimation code. Repeat 500 times. |  |
 | Figure S21 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S22 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S23 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S24 | prediction/prediction_outputs.R | Run the code |  |
-| Table S5 | N/A | Modify the parameter estimation code to point to data.txt | The parameter estimation code chooses a set of 10 starting parameter values, and then picks one that minimizes the negative log-likelihood. As a result, the parameter estimates will be slightly different than those in the Supplemental Material. |
+| Table S5 | N/A | Modify the parameter estimation code to point to data.txt in the data file | The parameter estimation code chooses a set of 10 starting parameter values, and then picks one that minimizes the negative log-likelihood. As a result, the parameter estimates will be slightly different than those in the Supplemental Material. |
 | Table S6 | estimation/paraFind_main - 2011.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist | Note that beta_2 and beta_4 are negative in the .csv but positive in the paper. This is not an error. The code assumes they are already negative, though equation 13 makes them negative. This is true for all parameters in the Supplemental Material. |
 | Table S7 | estimation/paraFind_main - 2017.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
 | Table S8 | estimation/paraFind_main - 2022.R | Run the code, but be sure to update file paths using the Run Kickoff Checklist |  |
