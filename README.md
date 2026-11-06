@@ -58,7 +58,7 @@ The simulation folder contains code related to simulations in the paper.
 | Table S8 |  |  |  |
 | Table S9 |  |  |  |
 | Table S10 |  |  |  |
-| Table S11 |  |  |  |
+| Table S11 |  |  | For stability, these parameters use a burn-in period of only 10 instead of the usual 100 |
 | Table S12 |  |  |  |
 | Table S13 |  |  |  |
 | Figure S25 |  |  |  |
