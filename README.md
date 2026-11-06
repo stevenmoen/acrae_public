@@ -30,9 +30,9 @@ The simulation folder contains code related to simulations in the paper.
 | Output | Files | Procedure | Notes |
 | --- | --- | --- | --- |
 | Figure 1 | descriptive_statistics/figure_1.R | Run the code |  |
-| Figure 2 |  |  |  |
+| Figure 2 | prediction/prediction_outputs.R | Run the code |  |
 | Table 1 |  |  |  |
-| Table 2 |  |  |  |
+| Table 2 | prediction/prediction_outputs.R | Run the code |  |
 | Table 3 |  |  |  |
 | Table 4 |  |  |  |
 | Figure S1 |  |  |  |
@@ -47,33 +47,33 @@ The simulation folder contains code related to simulations in the paper.
 | Figure S19 |  |  |  |
 | Figure S20 |  |  |  |
 | Table S4 |  |  |  |
-| Figure S21 |  |  |  |
-| Figure S22 |  |  |  |
-| Figure S23 |  |  |  |
-| Figure S24 |  |  |  |
+| Figure S21 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S22 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S23 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S24 | prediction/prediction_outputs.R | Run the code |  |
 | Table S5 |  |  |  |
 | Table S6 |  |  | Note that beta_2 and beta_4 are negative in the .csv but positive in the paper. This is not an error. The code assumes they are already negative, though equation 13 makes them negative. This is true for all parameters in the Supplemental Material. |
 | Table S7 |  |  |  |
 | Table S8 |  |  |  |
 | Table S9 |  |  |  |
-| Table S10 |  |  |  |
+| Table S10 | prediction/prediction_outputs.R | Run the code |  |
 | Table S11 |  |  | For stability, these parameters use a burn-in period of only 10 instead of the usual 100 |
 | Table S12 |  |  |  |
 | Table S13 |  |  |  |
-| Figure S25 |  |  |  |
-| Figure S26 |  |  |  |
-| Figure S27 |  |  |  |
-| Figure S28 |  |  |  |
-| Figure S29 |  |  |  |
-| Figure S30 |  |  |  |
-| Figure S31 |  |  |  |
-| Figure S32 |  |  |  |
-| Figure S33 |  |  |  |
-| Figure S34 |  |  |  |
-| Figure S35 |  |  |  |
-| Figure S36 |  |  |  |
+| Figure S25 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S26 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S27 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S28 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S29 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S30 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S31 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S32 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S33 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S34 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S35 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S36 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S37 |  |  |  |
 | Table S14 |  |  |  |
-| Figure S38 |  |  |  |
-| Figure S39 |  |  |  |
+| Figure S38 | prediction/prediction_outputs.R | Run the code |  |
+| Figure S39 | prediction/prediction_outputs.R | Run the code |  |
 
