@@ -2,9 +2,10 @@
 Code used for writing "Modeling Autoregressive Conditional Regional Extremes with Applications to Solar Flare Onset Predictions", accepted in _The Annals of Applied Statistics_.
 
 This paper predicts solar flares on short time horizons using a novel dynamic extreme value model called ACRAE. 
-This ReadMe contains two major sections. 
+This ReadMe contains three major sections. 
 The first describes each folder at a high level.
 The second is a table with information about how to reproduce the tables and figures in the paper.
+The third goes into details about files in the data_cleaning folder.
 
 ## Section 1
 
@@ -17,13 +18,15 @@ The data_cleaning folder contains code used to clean different types of data, fr
 
 The descriptive_statistics folder contains visualizations of data without any modeling.
 
-The estimation folder contains code needed to estimate the parameters for all areas. There is also a Run Kickoff Checklist. Using it is highly recommended, as you may be required to update file paths.
+The estimation folder contains code needed to estimate the parameters for all areas. There is also a Run Kickoff Checklist, written in Word so users can modify it as needed. Using it is highly recommended, as you may be required to update file paths.
 
 The parameters folder contains estimation details for the estimated parameters seen in Supplementary Material.
 
 The prediction folder contains code related to forecasting in the paper.
 
 The simulation folder contains code related to simulations in the paper.
+
+Codes not named below may be helper functions needed for the code to run properly.
 
 ## Section 2
 
@@ -77,3 +80,13 @@ The simulation folder contains code related to simulations in the paper.
 | Figure S38 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S39 | prediction/prediction_outputs.R | Run the code |  |
 
+## Section 3
+
+Below are files in the data_cleaning file with a brief description:
+
+- Download_Data_File.Rmd contains information about how pull and cut down the raw data
+    - Note that the 2017 data were downloaded directly from the Joint Science Operations Center from Stanford
+    - Use Fetch to find the period you'd like to download, then query the database to find what you need
+- The files called new_data_cleaning_py_[YEAR].R are used to trim, absolute difference, and aggregate the data
+- Data Cutting - [YEAR].R files describe how the data was cut into training and testing periods for use in the paper
+- The other codes contain helper functions
