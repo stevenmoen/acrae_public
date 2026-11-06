@@ -29,13 +29,12 @@ The simulation folder contains code related to simulations in the paper.
 
 | Output | Files | Procedure | Notes |
 | --- | --- | --- | --- |
-| Figure 1 |  |  |  |
+| Figure 1 | descriptive_statistics/figure_1.R | Run the code |  |
 | Figure 2 |  |  |  |
 | Table 1 |  |  |  |
 | Table 2 |  |  |  |
 | Table 3 |  |  |  |
 | Table 4 |  |  |  |
-| <br> | <br> | <br> | <br> |
 | Figure S1 |  |  |  |
 | Figure S2 |  |  |  |
 | Figure S3 |  |  |  |
