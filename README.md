@@ -72,8 +72,8 @@ The simulation folder contains code related to simulations in the paper.
 | Figure S34 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S35 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S36 | prediction/prediction_outputs.R | Run the code |  |
-| Figure S37 |  |  |  |
-| Table S14 |  |  |  |
+| Figure S37 | descriptive_statistics/figure_S37_table_S14.R | Run the code |  |
+| Table S14 | descriptive_statistics/figure_S37_table_S14.R | Run the code |  |
 | Figure S38 | prediction/prediction_outputs.R | Run the code |  |
 | Figure S39 | prediction/prediction_outputs.R | Run the code |  |
 
