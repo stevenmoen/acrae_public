@@ -1,5 +1,5 @@
 # acrae_public
-Code used for writing "Modeling Autoregressive Conditional Regional Extremes with Applications to Solar Flare Onset Predictions", accepted in _The Annals of Applied Statistics_.
+Code used for writing "Modeling Autoregressive Conditional Regional Extremes with Applications to Solar Flare Onset Predictions", accepted for publication in _The Annals of Applied Statistics_.
 
 This paper predicts solar flares on short time horizons using a novel dynamic extreme value model called ACRAE. 
 This ReadMe contains three major sections. 
@@ -12,7 +12,7 @@ The third goes into details about files in the data_cleaning folder.
 The data file contains processed data used to create the figures and tables in the paper. 
 The raw data and the cleaned flare data, too large for GitHub, are stored at this location:
 
-DOI: 
+DOI: [10.5061/dryad.np5hqc0b9](url)
 
 The data_cleaning folder contains code used to clean different types of data, from raw to clean to processed.
 
