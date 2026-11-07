@@ -1,16 +1,16 @@
 # acrae_public
-Code used in writing "Modeling Autoregressive Conditional Regional Extremes with Applications to Solar Flare Onset Predictions", accepted for publication in _The Annals of Applied Statistics_.
+Code used to produce the analyses in "Modeling Autoregressive Conditional Regional Extremes with Applications to Solar Flare Onset Predictions", accepted for publication in _The Annals of Applied Statistics_.
 
 This paper predicts solar flares on short time horizons using a novel dynamic extreme value model called ACRAE. 
 This README contains three major sections. 
 The first describes each folder at a high level.
-The second provides is a table with information about how to reproduce the tables and figures in the paper.
+The second provides provides a table with information about how to reproduce the tables and figures in the paper.
 The third provides additional detail about files in the data_cleaning folder.
 
 ## Section 1
 
 The data folder contains processed data used to create the figures and tables in the paper. 
-The raw data and the cleaned flare data, which too large for GitHub, are stored at this location:
+The raw data and the cleaned flare data, which are too large for GitHub, are stored at this location:
 
 DOI: https://doi.org/10.5061/dryad.np5hqc0b9 (under construction)
 
@@ -20,7 +20,7 @@ The descriptive_statistics folder contains visualizations of data without any mo
 
 The estimation folder contains code needed to estimate the parameters for all areas. There is also a Run Kickoff Checklist, written in Word so users can modify it as needed. Using it is highly recommended, as file paths may need to be updated.
 
-The parameters folder contains estimation details for the parameters reported in the Supplementary Material.
+The parameters folder contains estimation details for the parameters reported in the Supplemental Material.
 
 The prediction folder contains code related to forecasting in the paper.
 
@@ -73,10 +73,10 @@ Files not named below may be helper functions needed for other files to run prop
 
 Below are files in the data_cleaning folder, along with a brief description:
 
-- Download_Data_File.Rmd contains information about how download and crop the raw data
+- Download_Data_File.Rmd contains information about how to download and crop the raw data
     - Note that the 2017 data were downloaded directly from the Joint Science Operations Center (JSOC) at Stanford [http://jsoc.stanford.edu/](url)
     - Use Fetch to find the period you'd like to download, then query the database to find what you need
-    - On the JSOC website, click AIA data products, then aia.lev1_euv_12s
+    - On the JSOC website, click AIA Data Products, then aia.lev1_euv_12s
     - Read the FAQ page for how to query the specific data [http://jsoc.stanford.edu/FAQ.html](url)
 - The files called new_data_cleaning_py_[YEAR].R are used to trim, take absolute differences, and aggregate the data
 - Data Cutting - [YEAR].R files describe how the data were divided into training and testing periods for use in the paper
