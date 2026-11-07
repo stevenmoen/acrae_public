@@ -30,7 +30,7 @@ Codes not named below may be helper functions needed for other codes to run prop
 
 ## Section 2
 
-| Output | Files | Procedure | Notes |
+| Output | Files | Procedure | Notes&nbsp;&nbsp;&nbsp;&nbsp; |
 | --- | --- | --- | --- |
 | Figure 1 | descriptive_statistics/figure_1.R | Run the code |  |
 | Figure 2 | prediction/prediction_outputs.R | Run the code |  |
