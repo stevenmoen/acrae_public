@@ -12,7 +12,7 @@ The third provides additional detail about files in the data_cleaning folder.
 The data folder contains processed data used to create the figures and tables in the paper. 
 The raw data and the cleaned flare data, which are too large for GitHub, are stored at this location:
 
-DOI: https://doi.org/10.5061/dryad.np5hqc0b9 (under construction)
+DOI: https://doi.org/10.5061/dryad.np5hqc0b9
 
 The data_cleaning folder contains code used to clean different types of data, including converting raw data to cleaned and processed data.
 
